@@ -4,3 +4,4 @@
 #       GrupoNota10
 
 # Alunos:       Lucas Guedes,Matheus Renato,Vitor Yudi,Renan Kodama
+# Ruby_2.4.0 & Rails_5.0.2
