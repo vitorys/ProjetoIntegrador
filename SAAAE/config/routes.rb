@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+  get 'welcome/index'
+
   resources :cidades
   resources :estados
   resources :pessoas
