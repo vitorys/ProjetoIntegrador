@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Estado -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Estado nome:</strong>
-  <%= @estado.estado_nome %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:estado_nome) %>:</strong></dt>
+  <dd><%= @estado.estado_nome %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estado_uf) %>:</strong></dt>
+  <dd><%= @estado.estado_uf %></dd>
+</dl>
 
-<p>
-  <strong>Estado uf:</strong>
-  <%= @estado.estado_uf %>
-</p>
-
-<%= link_to 'Edit', edit_estado_path(@estado) %> |
-<%= link_to 'Back', estados_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              estados_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_estado_path(@estado), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              estado_path(@estado),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
