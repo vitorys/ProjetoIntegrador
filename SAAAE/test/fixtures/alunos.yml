@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aluno_curso: MyString
+  aluno_frequencia: 1.5
+  aluno_coeficiente: 1.5
+  aluno_data_ingresso: 2017-04-17
+  pessoa: one
+
+two:
+  aluno_curso: MyString
+  aluno_frequencia: 1.5
+  aluno_coeficiente: 1.5
+  aluno_data_ingresso: 2017-04-17
+  pessoa: two

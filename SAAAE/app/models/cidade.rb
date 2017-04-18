@@ -1,2 +1,0 @@
-class Cidade < ApplicationRecord
-end

@@ -10,22 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407014420) do
+ActiveRecord::Schema.define(version: 20170418011325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cidades", force: :cascade do |t|
-    t.string   "cidade_nome"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "estados", force: :cascade do |t|
-    t.string   "estado_nome"
-    t.string   "estado_uf"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "alunos", force: :cascade do |t|
+    t.string   "aluno_curso"
+    t.float    "aluno_frequencia"
+    t.float    "aluno_coeficiente"
+    t.date     "aluno_data_ingresso"
+    t.integer  "pessoa_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["pessoa_id"], name: "index_alunos_on_pessoa_id", using: :btree
   end
 
   create_table "pessoas", force: :cascade do |t|
@@ -35,4 +33,5 @@ ActiveRecord::Schema.define(version: 20170407014420) do
     t.datetime "updated_at",       null: false
   end
 
+  add_foreign_key "alunos", "pessoas"
 end

@@ -1,0 +1,63 @@
+<%= form_for @aluno, :html => { :class => "form-horizontal aluno" } do |f| %>
+
+  <% if @aluno.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@aluno.errors.count, "error") %> prohibited this aluno from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @aluno.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :aluno_curso, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :aluno_curso, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:aluno_curso) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :aluno_frequencia, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :aluno_frequencia, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:aluno_frequencia) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :aluno_coeficiente, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :aluno_coeficiente, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:aluno_coeficiente) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :aluno_data_ingresso, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :aluno_data_ingresso, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:aluno_data_ingresso) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :pessoa_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+    <%= f.collection_select(:pessoa_id, Pessoa.all, :id, :pessoa_nome, :prompt => true) %>
+    </div>
+    <%=f.error_span(:pessoa_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                alunos_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

@@ -1,4 +1,4 @@
-<%- model_class = Cidade -%>
+<%- model_class = Aluno -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -6,24 +6,32 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:cidade_nome) %></th>
+      <th><%= model_class.human_attribute_name(:aluno_curso) %></th>
+      <th><%= model_class.human_attribute_name(:aluno_frequencia) %></th>
+      <th><%= model_class.human_attribute_name(:aluno_coeficiente) %></th>
+      <th><%= model_class.human_attribute_name(:aluno_data_ingresso) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
-    <% @cidades.each do |cidade| %>
+    <% @alunos.each do |aluno| %>
       <tr>
-        <td><%= link_to cidade.id, cidade_path(cidade) %></td>
-        <td><%= cidade.cidade_nome %></td>
-        <td><%=l cidade.created_at %></td>
+        <td><%= link_to aluno.id, aluno_path(aluno) %></td>
+        <td><%= aluno.aluno_curso %></td>
+        <td><%= aluno.aluno_frequencia %></td>
+        <td><%= aluno.aluno_coeficiente %></td>
+        <td><%= aluno.aluno_data_ingresso %></td>
+        <td><%= aluno.pessoa_id %></td>
+        <td><%=l aluno.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
-                      cidade_path(cidade), :class => 'btn btn-default btn-xs' %>
+                      aluno_path(aluno), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_cidade_path(cidade), :class => 'btn btn-default btn-xs' %>
+                      edit_aluno_path(aluno), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      cidade_path(cidade),
+                      aluno_path(aluno),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
@@ -34,5 +42,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_cidade_path,
+            new_aluno_path,
             :class => 'btn btn-primary' %>
