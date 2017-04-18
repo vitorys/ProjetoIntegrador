@@ -1,0 +1,48 @@
+<%= form_for @funcionario, :html => { :class => "form-horizontal funcionario" } do |f| %>
+
+  <% if @funcionario.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@funcionario.errors.count, "error") %> prohibited this funcionario from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @funcionario.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :funcionario_area, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :funcionario_area, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:funcionario_area) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :funcionario_permissao, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :funcionario_permissao, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:funcionario_permissao) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :pessoa_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+    <%= f.collection_select(:pessoa_id, Pessoa.all, :id, :pessoa_nome, :prompt => true) %>
+    </div>
+    <%=f.error_span(:pessoa_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                funcionarios_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

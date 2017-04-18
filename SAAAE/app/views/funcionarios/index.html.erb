@@ -1,4 +1,4 @@
-<%- model_class = Aluno -%>
+<%- model_class = Funcionario -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -6,32 +6,28 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:funcionario_area) %></th>
+      <th><%= model_class.human_attribute_name(:funcionario_permissao) %></th>
       <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
-      <th><%= model_class.human_attribute_name(:aluno_curso) %></th>
-      <th><%= model_class.human_attribute_name(:aluno_frequencia) %></th>
-      <th><%= model_class.human_attribute_name(:aluno_coeficiente) %></th>
-      <th><%= model_class.human_attribute_name(:aluno_data_ingresso) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
-    <% @alunos.each do |aluno| %>
+    <% @funcionarios.each do |funcionario| %>
       <tr>
-        <td><%= link_to aluno.id, aluno_path(aluno) %></td>
-        <td><%= aluno.pessoa_id %></td>
-        <td><%= aluno.aluno_curso %></td>
-        <td><%= aluno.aluno_frequencia %></td>
-        <td><%= aluno.aluno_coeficiente %></td>
-        <td><%= aluno.aluno_data_ingresso %></td>
-        <td><%=l aluno.created_at %></td>
+        <td><%= link_to funcionario.id, funcionario_path(funcionario) %></td>
+        <td><%= funcionario.funcionario_area %></td>
+        <td><%= funcionario.funcionario_permissao %></td>
+        <td><%= funcionario.pessoa_id %></td>
+        <td><%=l funcionario.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
-                      aluno_path(aluno), :class => 'btn btn-default btn-xs' %>
+                      funcionario_path(funcionario), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_aluno_path(aluno), :class => 'btn btn-default btn-xs' %>
+                      edit_funcionario_path(funcionario), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      aluno_path(aluno),
+                      funcionario_path(funcionario),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
@@ -42,5 +38,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_aluno_path,
+            new_funcionario_path,
             :class => 'btn btn-primary' %>

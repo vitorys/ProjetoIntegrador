@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :funcionarios
   resources :alunos
   resources :pessoas
   root 'welcome#index'
