@@ -18,9 +18,12 @@
   <div class="form-group">
     <%= f.label :aluno_curso, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :aluno_curso, :class => 'form-control' %>
+      <%= f.select :aluno_curso, options_for_select([["Ciência da Computação", "Ciência da Computação"], ["Engenharia de Alimentos", "Engenharia de Alimentos"],["Engenharia Ambiental", "Engenharia Ambiental"], ["Engenharia Civil", "Engenharia Civil"], ["Engenharia Eletrônica", "Engenharia Eletrônica"],["Licenciatura em Química","Licenciatura em Química"]]) %>
+
     </div>
     <%=f.error_span(:aluno_curso) %>
+
+
   </div>
   <div class="form-group">
     <%= f.label :aluno_frequencia, :class => 'control-label col-lg-2' %>
@@ -39,7 +42,7 @@
   <div class="form-group">
     <%= f.label :aluno_data_ingresso, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :aluno_data_ingresso, :class => 'form-control' %>
+      <%= f.date_field :aluno_data_ingresso, :class => 'form-control' %>
     </div>
     <%=f.error_span(:aluno_data_ingresso) %>
   </div>
