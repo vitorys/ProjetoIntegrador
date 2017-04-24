@@ -19,7 +19,7 @@
     <% @alunos.each do |aluno| %>
       <tr>
         <td><%= link_to aluno.id, aluno_path(aluno) %></td>
-        <td><%= aluno.pessoa_id %></td>
+        <td><%= foundPessoa(aluno.pessoa_id).pessoa_nome %></td>
         <td><%= aluno.aluno_curso %></td>
         <td><%= aluno.aluno_frequencia %></td>
         <td><%= aluno.aluno_coeficiente %></td>
