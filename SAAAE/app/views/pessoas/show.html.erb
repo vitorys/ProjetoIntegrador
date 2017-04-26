@@ -6,9 +6,16 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:pessoa_nome) %>:</strong></dt>
   <dd><%= @pessoa.pessoa_nome %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:pessoa_documento) %>:</strong></dt>
-  <dd><%= @pessoa.pessoa_documento %></dd>
-  
+  <dt><strong><%= model_class.human_attribute_name(:pessoa_endereco) %>:</strong></dt>
+  <dd><%= @pessoa.pessoa_endereco %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pessoa_cidade) %>:</strong></dt>
+  <dd><%= @pessoa.pessoa_cidade %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pessoa_estado) %>:</strong></dt>
+  <dd><%= @pessoa.pessoa_estado %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pessoa_cep) %>:</strong></dt>
+  <dd><%= @pessoa.pessoa_cep %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pessoa_email) %>:</strong></dt>
+  <dd><%= @pessoa.pessoa_email %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Relatorio Gerals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rg objetivo</th>
+      <th>Rg atendimento</th>
+      <th>Relatorio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @relatorio_gerals.each do |relatorio_geral| %>
+      <tr>
+        <td><%= relatorio_geral.rg_objetivo %></td>
+        <td><%= relatorio_geral.rg_atendimento %></td>
+        <td><%= relatorio_geral.relatorio %></td>
+        <td><%= link_to 'Show', relatorio_geral %></td>
+        <td><%= link_to 'Edit', edit_relatorio_geral_path(relatorio_geral) %></td>
+        <td><%= link_to 'Destroy', relatorio_geral, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Relatorio Geral', new_relatorio_geral_path %>

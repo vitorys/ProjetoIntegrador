@@ -1,0 +1,48 @@
+<%= form_for @relatorio_psicologico, :html => { :class => "form-horizontal relatorio_psicologico" } do |f| %>
+
+  <% if @relatorio_psicologico.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@relatorio_psicologico.errors.count, "error") %> prohibited this relatorio_psicologico from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @relatorio_psicologico.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :rp_objetivo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rp_objetivo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rp_objetivo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rp_atendimento, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rp_atendimento, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rp_atendimento) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :relatorio_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :relatorio_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:relatorio_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                relatorio_psicologicos_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  resources :relatorio_gerals
+  resources :relatorio_psicologicos
+  resources :relatorio_assistente_socials
+  resources :relatorios
   resources :funcionarios
   resources :alunos
+  resources :credencials
+  resources :documentos
   resources :pessoas
   root 'welcome#index'
   get 'welcome/index'

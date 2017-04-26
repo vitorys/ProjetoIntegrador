@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rg objetivo:</strong>
+  <%= @relatorio_geral.rg_objetivo %>
+</p>
+
+<p>
+  <strong>Rg atendimento:</strong>
+  <%= @relatorio_geral.rg_atendimento %>
+</p>
+
+<p>
+  <strong>Relatorio:</strong>
+  <%= @relatorio_geral.relatorio %>
+</p>
+
+<%= link_to 'Edit', edit_relatorio_geral_path(@relatorio_geral) %> |
+<%= link_to 'Back', relatorio_gerals_path %>

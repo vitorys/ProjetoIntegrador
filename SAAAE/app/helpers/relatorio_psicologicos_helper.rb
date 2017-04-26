@@ -1,0 +1,2 @@
+module RelatorioPsicologicosHelper
+end

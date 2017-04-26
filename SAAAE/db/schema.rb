@@ -10,23 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418193823) do
+ActiveRecord::Schema.define(version: 20170425234501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "alunos", force: :cascade do |t|
+    t.integer  "aluno_ra"
     t.string   "aluno_curso"
+    t.date     "aluno_data_ingresso"
+    t.integer  "aluno_periodo"
     t.float    "aluno_frequencia"
     t.float    "aluno_coeficiente"
-    t.date     "aluno_data_ingresso"
     t.integer  "pessoa_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.index ["pessoa_id"], name: "index_alunos_on_pessoa_id", using: :btree
   end
 
+  create_table "credencials", force: :cascade do |t|
+    t.string   "credencial_senha"
+    t.integer  "pessoa_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["pessoa_id"], name: "index_credencials_on_pessoa_id", using: :btree
+  end
+
+  create_table "documentos", force: :cascade do |t|
+    t.string   "doc_rg"
+    t.string   "doc_cpf"
+    t.integer  "pessoa_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pessoa_id"], name: "index_documentos_on_pessoa_id", using: :btree
+  end
+
   create_table "funcionarios", force: :cascade do |t|
+    t.integer  "funcionario_rf"
     t.string   "funcionario_area"
     t.integer  "funcionario_permissao"
     t.integer  "pessoa_id"
@@ -37,11 +57,59 @@ ActiveRecord::Schema.define(version: 20170418193823) do
 
   create_table "pessoas", force: :cascade do |t|
     t.string   "pessoa_nome"
-    t.string   "pessoa_documento"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "pessoa_endereco"
+    t.string   "pessoa_cidade"
+    t.string   "pessoa_estado"
+    t.string   "pessoa_cep"
+    t.string   "pessoa_email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "relatorio_assistente_socials", force: :cascade do |t|
+    t.text     "ras_motivo"
+    t.text     "ras_entrevista"
+    t.integer  "relatorio_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["relatorio_id"], name: "index_relatorio_assistente_socials_on_relatorio_id", using: :btree
+  end
+
+  create_table "relatorio_gerals", force: :cascade do |t|
+    t.text     "rg_objetivo"
+    t.text     "rg_atendimento"
+    t.integer  "relatorio_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["relatorio_id"], name: "index_relatorio_gerals_on_relatorio_id", using: :btree
+  end
+
+  create_table "relatorio_psicologicos", force: :cascade do |t|
+    t.text     "rp_objetivo"
+    t.text     "rp_atendimento"
+    t.integer  "relatorio_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["relatorio_id"], name: "index_relatorio_psicologicos_on_relatorio_id", using: :btree
+  end
+
+  create_table "relatorios", force: :cascade do |t|
+    t.date     "relatorio_data"
+    t.integer  "aluno_id"
+    t.integer  "funcionario_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["aluno_id"], name: "index_relatorios_on_aluno_id", using: :btree
+    t.index ["funcionario_id"], name: "index_relatorios_on_funcionario_id", using: :btree
   end
 
   add_foreign_key "alunos", "pessoas"
+  add_foreign_key "credencials", "pessoas"
+  add_foreign_key "documentos", "pessoas"
   add_foreign_key "funcionarios", "pessoas"
+  add_foreign_key "relatorio_assistente_socials", "relatorios"
+  add_foreign_key "relatorio_gerals", "relatorios"
+  add_foreign_key "relatorio_psicologicos", "relatorios"
+  add_foreign_key "relatorios", "alunos"
+  add_foreign_key "relatorios", "funcionarios"
 end

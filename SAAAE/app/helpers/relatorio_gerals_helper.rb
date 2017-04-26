@@ -1,0 +1,2 @@
+module RelatorioGeralsHelper
+end

@@ -17,7 +17,7 @@ class AlunosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create aluno" do
     assert_difference('Aluno.count') do
-      post alunos_url, params: { aluno: { aluno_coeficiente: @aluno.aluno_coeficiente, aluno_curso: @aluno.aluno_curso, aluno_data_ingresso: @aluno.aluno_data_ingresso, aluno_frequencia: @aluno.aluno_frequencia, pessoa_id: @aluno.pessoa_id } }
+      post alunos_url, params: { aluno: { aluno_coeficiente: @aluno.aluno_coeficiente, aluno_curso: @aluno.aluno_curso, aluno_data_ingresso: @aluno.aluno_data_ingresso, aluno_frequencia: @aluno.aluno_frequencia, aluno_periodo: @aluno.aluno_periodo, aluno_ra: @aluno.aluno_ra, pessoa_id: @aluno.pessoa_id } }
     end
 
     assert_redirected_to aluno_url(Aluno.last)
@@ -34,7 +34,7 @@ class AlunosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update aluno" do
-    patch aluno_url(@aluno), params: { aluno: { aluno_coeficiente: @aluno.aluno_coeficiente, aluno_curso: @aluno.aluno_curso, aluno_data_ingresso: @aluno.aluno_data_ingresso, aluno_frequencia: @aluno.aluno_frequencia, pessoa_id: @aluno.pessoa_id } }
+    patch aluno_url(@aluno), params: { aluno: { aluno_coeficiente: @aluno.aluno_coeficiente, aluno_curso: @aluno.aluno_curso, aluno_data_ingresso: @aluno.aluno_data_ingresso, aluno_frequencia: @aluno.aluno_frequencia, aluno_periodo: @aluno.aluno_periodo, aluno_ra: @aluno.aluno_ra, pessoa_id: @aluno.pessoa_id } }
     assert_redirected_to aluno_url(@aluno)
   end
 

@@ -17,7 +17,7 @@ class FuncionariosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create funcionario" do
     assert_difference('Funcionario.count') do
-      post funcionarios_url, params: { funcionario: { funcionario_area: @funcionario.funcionario_area, funcionario_permissao: @funcionario.funcionario_permissao, pessoa_id: @funcionario.pessoa_id } }
+      post funcionarios_url, params: { funcionario: { funcionario_area: @funcionario.funcionario_area, funcionario_permissao: @funcionario.funcionario_permissao, funcionario_rf: @funcionario.funcionario_rf, pessoa_id: @funcionario.pessoa_id } }
     end
 
     assert_redirected_to funcionario_url(Funcionario.last)
@@ -34,7 +34,7 @@ class FuncionariosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update funcionario" do
-    patch funcionario_url(@funcionario), params: { funcionario: { funcionario_area: @funcionario.funcionario_area, funcionario_permissao: @funcionario.funcionario_permissao, pessoa_id: @funcionario.pessoa_id } }
+    patch funcionario_url(@funcionario), params: { funcionario: { funcionario_area: @funcionario.funcionario_area, funcionario_permissao: @funcionario.funcionario_permissao, funcionario_rf: @funcionario.funcionario_rf, pessoa_id: @funcionario.pessoa_id } }
     assert_redirected_to funcionario_url(@funcionario)
   end
 
