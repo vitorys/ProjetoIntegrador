@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  relatorio_data: 2017-04-25
+  aluno: one
+  funcionario: one
+
+two:
+  relatorio_data: 2017-04-25
+  aluno: two
+  funcionario: two

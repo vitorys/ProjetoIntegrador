@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doc_rg: MyString
+  doc_cpf: MyString
+  pessoa: one
+
+two:
+  doc_rg: MyString
+  doc_cpf: MyString
+  pessoa: two

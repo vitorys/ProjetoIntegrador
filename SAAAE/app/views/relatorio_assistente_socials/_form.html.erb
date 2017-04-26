@@ -1,0 +1,48 @@
+<%= form_for @relatorio_assistente_social, :html => { :class => "form-horizontal relatorio_assistente_social" } do |f| %>
+
+  <% if @relatorio_assistente_social.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@relatorio_assistente_social.errors.count, "error") %> prohibited this relatorio_assistente_social from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @relatorio_assistente_social.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :ras_motivo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :ras_motivo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:ras_motivo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ras_entrevista, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :ras_entrevista, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:ras_entrevista) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :relatorio_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :relatorio_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:relatorio_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                relatorio_assistente_socials_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

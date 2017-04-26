@@ -1,0 +1,1 @@
+json.partial! "relatorio_assistente_socials/relatorio_assistente_social", relatorio_assistente_social: @relatorio_assistente_social

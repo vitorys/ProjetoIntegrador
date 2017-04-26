@@ -1,0 +1,23 @@
+<%- model_class = Documento -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:doc_rg) %>:</strong></dt>
+  <dd><%= @documento.doc_rg %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:doc_cpf) %>:</strong></dt>
+  <dd><%= @documento.doc_cpf %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pessoa_id) %>:</strong></dt>
+  <dd><%= @documento.pessoa_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              documentos_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_documento_path(@documento), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              documento_path(@documento),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

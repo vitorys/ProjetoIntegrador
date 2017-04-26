@@ -6,9 +6,10 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
+      <th><%= model_class.human_attribute_name(:funcionario_rf) %></th>
       <th><%= model_class.human_attribute_name(:funcionario_area) %></th>
       <th><%= model_class.human_attribute_name(:funcionario_permissao) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -17,9 +18,10 @@
     <% @funcionarios.each do |funcionario| %>
       <tr>
         <td><%= link_to funcionario.id, funcionario_path(funcionario) %></td>
-        <td><%= foundPessoa(funcionario.pessoa_id).pessoa_nome %></td>
+        <td><%= funcionario.funcionario_rf %></td>
         <td><%= funcionario.funcionario_area %></td>
         <td><%= funcionario.funcionario_permissao %></td>
+        <td><%= funcionario.pessoa_id %></td>
         <td><%=l funcionario.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

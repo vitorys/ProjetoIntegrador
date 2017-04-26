@@ -2,8 +2,16 @@
 
 one:
   pessoa_nome: MyString
-  pessoa_documento: MyString
+  pessoa_endereco: MyString
+  pessoa_cidade: MyString
+  pessoa_estado: MyString
+  pessoa_cep: MyString
+  pessoa_email: MyString
 
 two:
   pessoa_nome: MyString
-  pessoa_documento: MyString
+  pessoa_endereco: MyString
+  pessoa_cidade: MyString
+  pessoa_estado: MyString
+  pessoa_cep: MyString
+  pessoa_email: MyString

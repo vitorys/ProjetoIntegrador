@@ -1,0 +1,32 @@
+<%= form_for(relatorio_geral) do |f| %>
+  <% if relatorio_geral.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(relatorio_geral.errors.count, "error") %> prohibited this relatorio_geral from being saved:</h2>
+
+      <ul>
+      <% relatorio_geral.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rg_objetivo %>
+    <%= f.text_area :rg_objetivo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rg_atendimento %>
+    <%= f.text_area :rg_atendimento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :relatorio_id %>
+    <%= f.text_field :relatorio_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

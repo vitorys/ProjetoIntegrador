@@ -1,0 +1,42 @@
+<%- model_class = RelatorioAssistenteSocial -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:ras_motivo) %></th>
+      <th><%= model_class.human_attribute_name(:ras_entrevista) %></th>
+      <th><%= model_class.human_attribute_name(:relatorio_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @relatorio_assistente_socials.each do |relatorio_assistente_social| %>
+      <tr>
+        <td><%= link_to relatorio_assistente_social.id, relatorio_assistente_social_path(relatorio_assistente_social) %></td>
+        <td><%= relatorio_assistente_social.ras_motivo %></td>
+        <td><%= relatorio_assistente_social.ras_entrevista %></td>
+        <td><%= relatorio_assistente_social.relatorio_id %></td>
+        <td><%=l relatorio_assistente_social.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      relatorio_assistente_social_path(relatorio_assistente_social), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_relatorio_assistente_social_path(relatorio_assistente_social), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      relatorio_assistente_social_path(relatorio_assistente_social),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_relatorio_assistente_social_path,
+            :class => 'btn btn-primary' %>

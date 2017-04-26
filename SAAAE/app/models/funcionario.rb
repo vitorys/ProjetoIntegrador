@@ -1,3 +1,3 @@
 class Funcionario < ApplicationRecord
-  belongs_to :pessoa, dependent: :destroy
+  belongs_to :pessoa
 end

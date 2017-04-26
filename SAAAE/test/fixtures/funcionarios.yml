@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  funcionario_rf: 1
   funcionario_area: MyString
   funcionario_permissao: 1
   pessoa: one
 
 two:
+  funcionario_rf: 1
   funcionario_area: MyString
   funcionario_permissao: 1
   pessoa: two

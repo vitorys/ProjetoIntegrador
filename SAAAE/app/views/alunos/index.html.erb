@@ -1,16 +1,18 @@
 <%- model_class = Aluno -%>
-<div class="page-header" style="margin-top: 0px;">
-  <h1 style="margin-top: 0px;"><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
+      <th><%= model_class.human_attribute_name(:aluno_ra) %></th>
       <th><%= model_class.human_attribute_name(:aluno_curso) %></th>
+      <th><%= model_class.human_attribute_name(:aluno_data_ingresso) %></th>
+      <th><%= model_class.human_attribute_name(:aluno_periodo) %></th>
       <th><%= model_class.human_attribute_name(:aluno_frequencia) %></th>
       <th><%= model_class.human_attribute_name(:aluno_coeficiente) %></th>
-      <th><%= model_class.human_attribute_name(:aluno_data_ingresso) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -19,11 +21,13 @@
     <% @alunos.each do |aluno| %>
       <tr>
         <td><%= link_to aluno.id, aluno_path(aluno) %></td>
-        <td><%= foundPessoa(aluno.pessoa_id).pessoa_nome %></td>
+        <td><%= aluno.aluno_ra %></td>
         <td><%= aluno.aluno_curso %></td>
+        <td><%= aluno.aluno_data_ingresso %></td>
+        <td><%= aluno.aluno_periodo %></td>
         <td><%= aluno.aluno_frequencia %></td>
         <td><%= aluno.aluno_coeficiente %></td>
-        <td><%= aluno.aluno_data_ingresso %></td>
+        <td><%= aluno.pessoa_id %></td>
         <td><%=l aluno.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

@@ -1,13 +1,17 @@
 <%- model_class = Pessoa -%>
-<div class="page-header" style="margin-top: 0px;">
-  <h1 style="margin-top: 0px;"><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:pessoa_nome) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_documento) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_endereco) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_cidade) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_estado) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_cep) %></th>
+      <th><%= model_class.human_attribute_name(:pessoa_email) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -17,7 +21,11 @@
       <tr>
         <td><%= link_to pessoa.id, pessoa_path(pessoa) %></td>
         <td><%= pessoa.pessoa_nome %></td>
-        <td><%= pessoa.pessoa_documento %></td>
+        <td><%= pessoa.pessoa_endereco %></td>
+        <td><%= pessoa.pessoa_cidade %></td>
+        <td><%= pessoa.pessoa_estado %></td>
+        <td><%= pessoa.pessoa_cep %></td>
+        <td><%= pessoa.pessoa_email %></td>
         <td><%=l pessoa.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
