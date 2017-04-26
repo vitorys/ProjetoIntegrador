@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :funcionarios
   resources :alunos
   resources :credencials
-  resources :documentos
   resources :pessoas
+  resources :documentos
   root 'welcome#index'
   get 'welcome/index'
 

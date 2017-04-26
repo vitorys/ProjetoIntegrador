@@ -57,6 +57,13 @@
     </div>
     <%=f.error_span(:pessoa_email) %>
   </div>
+  <div class="form-group">
+    <%= f.label :documento_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :documento_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:documento_id) %>
+  </div>
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">

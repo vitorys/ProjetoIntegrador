@@ -7,6 +7,7 @@ class CreatePessoas < ActiveRecord::Migration[5.0]
       t.string :pessoa_estado
       t.string :pessoa_cep
       t.string :pessoa_email
+      t.references :documento, foreign_key: true
 
       t.timestamps
     end

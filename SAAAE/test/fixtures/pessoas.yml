@@ -7,6 +7,7 @@ one:
   pessoa_estado: MyString
   pessoa_cep: MyString
   pessoa_email: MyString
+  documento: one
 
 two:
   pessoa_nome: MyString
@@ -15,3 +16,4 @@ two:
   pessoa_estado: MyString
   pessoa_cep: MyString
   pessoa_email: MyString
+  documento: two

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425234501) do
+ActiveRecord::Schema.define(version: 20170426011639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,10 +39,8 @@ ActiveRecord::Schema.define(version: 20170425234501) do
   create_table "documentos", force: :cascade do |t|
     t.string   "doc_rg"
     t.string   "doc_cpf"
-    t.integer  "pessoa_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pessoa_id"], name: "index_documentos_on_pessoa_id", using: :btree
   end
 
   create_table "funcionarios", force: :cascade do |t|
@@ -62,8 +60,10 @@ ActiveRecord::Schema.define(version: 20170425234501) do
     t.string   "pessoa_estado"
     t.string   "pessoa_cep"
     t.string   "pessoa_email"
+    t.integer  "documento_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["documento_id"], name: "index_pessoas_on_documento_id", using: :btree
   end
 
   create_table "relatorio_assistente_socials", force: :cascade do |t|
@@ -105,8 +105,8 @@ ActiveRecord::Schema.define(version: 20170425234501) do
 
   add_foreign_key "alunos", "pessoas"
   add_foreign_key "credencials", "pessoas"
-  add_foreign_key "documentos", "pessoas"
   add_foreign_key "funcionarios", "pessoas"
+  add_foreign_key "pessoas", "documentos"
   add_foreign_key "relatorio_assistente_socials", "relatorios"
   add_foreign_key "relatorio_gerals", "relatorios"
   add_foreign_key "relatorio_psicologicos", "relatorios"

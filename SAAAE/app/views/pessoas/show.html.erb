@@ -16,6 +16,8 @@
   <dd><%= @pessoa.pessoa_cep %></dd>
   <dt><strong><%= model_class.human_attribute_name(:pessoa_email) %>:</strong></dt>
   <dd><%= @pessoa.pessoa_email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:documento_id) %>:</strong></dt>
+  <dd><%= @pessoa.documento_id %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

@@ -12,6 +12,7 @@
       <th><%= model_class.human_attribute_name(:pessoa_estado) %></th>
       <th><%= model_class.human_attribute_name(:pessoa_cep) %></th>
       <th><%= model_class.human_attribute_name(:pessoa_email) %></th>
+      <th><%= model_class.human_attribute_name(:documento_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -26,6 +27,7 @@
         <td><%= pessoa.pessoa_estado %></td>
         <td><%= pessoa.pessoa_cep %></td>
         <td><%= pessoa.pessoa_email %></td>
+        <td><%= pessoa.documento_id %></td>
         <td><%=l pessoa.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

@@ -17,7 +17,7 @@ class PessoasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create pessoa" do
     assert_difference('Pessoa.count') do
-      post pessoas_url, params: { pessoa: { pessoa_cep: @pessoa.pessoa_cep, pessoa_cidade: @pessoa.pessoa_cidade, pessoa_email: @pessoa.pessoa_email, pessoa_endereco: @pessoa.pessoa_endereco, pessoa_estado: @pessoa.pessoa_estado, pessoa_nome: @pessoa.pessoa_nome } }
+      post pessoas_url, params: { pessoa: { documento_id: @pessoa.documento_id, pessoa_cep: @pessoa.pessoa_cep, pessoa_cidade: @pessoa.pessoa_cidade, pessoa_email: @pessoa.pessoa_email, pessoa_endereco: @pessoa.pessoa_endereco, pessoa_estado: @pessoa.pessoa_estado, pessoa_nome: @pessoa.pessoa_nome } }
     end
 
     assert_redirected_to pessoa_url(Pessoa.last)
@@ -34,7 +34,7 @@ class PessoasControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update pessoa" do
-    patch pessoa_url(@pessoa), params: { pessoa: { pessoa_cep: @pessoa.pessoa_cep, pessoa_cidade: @pessoa.pessoa_cidade, pessoa_email: @pessoa.pessoa_email, pessoa_endereco: @pessoa.pessoa_endereco, pessoa_estado: @pessoa.pessoa_estado, pessoa_nome: @pessoa.pessoa_nome } }
+    patch pessoa_url(@pessoa), params: { pessoa: { documento_id: @pessoa.documento_id, pessoa_cep: @pessoa.pessoa_cep, pessoa_cidade: @pessoa.pessoa_cidade, pessoa_email: @pessoa.pessoa_email, pessoa_endereco: @pessoa.pessoa_endereco, pessoa_estado: @pessoa.pessoa_estado, pessoa_nome: @pessoa.pessoa_nome } }
     assert_redirected_to pessoa_url(@pessoa)
   end
 

@@ -1,32 +1,48 @@
-<%= form_for(relatorio_geral) do |f| %>
-  <% if relatorio_geral.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(relatorio_geral.errors.count, "error") %> prohibited this relatorio_geral from being saved:</h2>
+<%= form_for @relatorio_geral, :html => { :class => "form-horizontal relatorio_geral" } do |f| %>
 
-      <ul>
-      <% relatorio_geral.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @relatorio_geral.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@relatorio_geral.errors.count, "error") %> prohibited this relatorio_geral from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @relatorio_geral.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :rg_objetivo %>
-    <%= f.text_area :rg_objetivo %>
+  <div class="form-group">
+    <%= f.label :rg_objetivo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rg_objetivo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rg_objetivo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rg_atendimento, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rg_atendimento, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rg_atendimento) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :relatorio_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :relatorio_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:relatorio_id) %>
   </div>
 
-  <div class="field">
-    <%= f.label :rg_atendimento %>
-    <%= f.text_area :rg_atendimento %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                relatorio_gerals_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :relatorio_id %>
-    <%= f.text_field :relatorio_id %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

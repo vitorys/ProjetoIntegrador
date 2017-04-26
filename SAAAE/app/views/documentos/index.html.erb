@@ -8,7 +8,6 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:doc_rg) %></th>
       <th><%= model_class.human_attribute_name(:doc_cpf) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -19,7 +18,6 @@
         <td><%= link_to documento.id, documento_path(documento) %></td>
         <td><%= documento.doc_rg %></td>
         <td><%= documento.doc_cpf %></td>
-        <td><%= documento.pessoa_id %></td>
         <td><%=l documento.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
