@@ -13,6 +13,27 @@
  *= require_tree .
  *= require_self
  */
- body{
+body{
  	margin-top: 0px;
- }
+ 	margin: 0px;
+}
+.container-fluid{
+	padding: 0px;
+}
+.container-fluid .espaco{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.dropdown:hover .dropdown-menu{
+	display: inline;
+}
+.dropdown .dropdown-menu{
+	padding: 0px;
+}
+.dropdown .dropdown-menu a{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.dropdown .dropdown-menu .divider{
+	margin: 0px;
+}
