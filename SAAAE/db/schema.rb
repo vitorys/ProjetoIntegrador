@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170426011639) do
+ActiveRecord::Schema.define(version: 20170427175456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,13 @@ ActiveRecord::Schema.define(version: 20170426011639) do
     t.datetime "updated_at",     null: false
     t.index ["aluno_id"], name: "index_relatorios_on_aluno_id", using: :btree
     t.index ["funcionario_id"], name: "index_relatorios_on_funcionario_id", using: :btree
+  end
+
+  create_table "testes", force: :cascade do |t|
+    t.string   "rotulo"
+    t.string   "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "alunos", "pessoas"
