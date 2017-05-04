@@ -1,6 +1,6 @@
 class PessoasController < ApplicationController
   before_action :set_pessoa, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_usuario!
   # GET /pessoas
   # GET /pessoas.json
   def index
@@ -15,6 +15,7 @@ class PessoasController < ApplicationController
   # GET /pessoas/new
   def new
     @pessoa = Pessoa.new
+    @pessoa.build_usuario
   end
 
   # GET /pessoas/1/edit
@@ -69,6 +70,6 @@ class PessoasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pessoa_params
-      params.require(:pessoa).permit(:pessoa_nome, :pessoa_endereco, :pessoa_cidade, :pessoa_estado, :pessoa_cep, :pessoa_email, :documento_id)
+      params.require(:pessoa).permit(:pessoa_nome, :pessoa_endereco, :pessoa_cidade, :pessoa_estado, :pessoa_cep, :pessoa_email, :documento_id, :usuario_attributes => [:email, :password])
     end
 end

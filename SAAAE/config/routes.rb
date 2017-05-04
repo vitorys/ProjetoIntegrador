@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :usuarios
   resources :relatorio_gerals
   resources :relatorio_psicologicos
   resources :relatorio_assistente_socials

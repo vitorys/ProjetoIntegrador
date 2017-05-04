@@ -76,7 +76,7 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><%= link_to "Sair", funcionarios_path  %></li>
+                  <li class="active"><%= link_to "Sair", destroy_usuario_session_path, method: :delete, :class => 'navbar-link'  %></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
