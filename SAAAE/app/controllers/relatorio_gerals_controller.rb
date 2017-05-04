@@ -15,6 +15,7 @@ class RelatorioGeralsController < ApplicationController
   # GET /relatorio_gerals/new
   def new
     @relatorio_geral = RelatorioGeral.new
+    @relatorio_geral.build_relatorio
   end
 
   # GET /relatorio_gerals/1/edit
@@ -69,6 +70,6 @@ class RelatorioGeralsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def relatorio_geral_params
-      params.require(:relatorio_geral).permit(:rg_objetivo, :rg_atendimento, :relatorio_id)
+      params.require(:relatorio_geral).permit(:rg_objetivo, :rg_atendimento, :relatorio_attributes => [:relatorio_data, :aluno_id, :funcionario_id])
     end
 end

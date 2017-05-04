@@ -37,11 +37,11 @@
     <%=f.error_span(:funcionario_permissao) %>
   </div>
   <div class="form-group">
-    <%= f.label :pessoa_id, :class => 'control-label col-lg-2' %>
+  <%= f.label :pessoa_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :pessoa_id, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:pessoa_id) %>
+  <%= f.collection_select(:pessoa_id, Pessoa.all, :id, :pessoa_nome, {:prompt => 'Selecione a Pessoa'})%>  
+  </div>
+  <%=f.error_span(:pessoa_id) %>
   </div>
 
   <div class="form-group">

@@ -1,13 +1,13 @@
-<%= form_for @relatorio_assistente_social, :html => { :class => "form-horizontal relatorio_assistente_social" } do |f| %>
+<%= form_for @relatorio_pedagogico, :html => { :class => "form-horizontal relatorio_pedagogico" } do |f| %>
 
-  <% if @relatorio_assistente_social.errors.any? %>
+  <% if @relatorio_pedagogico.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@relatorio_assistente_social.errors.count, "error") %> prohibited this relatorio_assistente_social from being saved:</h3>
+        <h3 class="panel-title"><%= pluralize(@relatorio_pedagogico.errors.count, "error") %> prohibited this relatorio_pedagogico from being saved:</h3>
       </div>
       <div class="panel-body">
         <ul>
-        <% @relatorio_assistente_social.errors.full_messages.each do |msg| %>
+        <% @relatorio_pedagogico.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
         </ul>
@@ -16,20 +16,20 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :ras_motivo, :class => 'control-label col-lg-2' %>
+    <%= f.label :rpe_objetivo, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :ras_motivo, :class => 'form-control' %>
+      <%= f.text_field :rpe_objetivo, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:ras_motivo) %>
+    <%=f.error_span(:rpe_objetivo) %>
   </div>
   <div class="form-group">
-    <%= f.label :ras_entrevista, :class => 'control-label col-lg-2' %>
+    <%= f.label :rpe_atendimento, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :ras_entrevista, :class => 'form-control' %>
+      <%= f.text_field :rpe_atendimento, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:ras_entrevista) %>
+    <%=f.error_span(:rpe_atendimento) %>
   </div>
-
+  
   <%= f.fields_for :relatorio do |ff| %>
   <div class="form-group">
     <%= ff.label :relatorio_data, :class => 'control-label col-lg-2' %>
@@ -53,12 +53,11 @@
   </div>
 <% end %>
 
-
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                relatorio_assistente_socials_path, :class => 'btn btn-default' %>
+                relatorio_pedagogicos_path, :class => 'btn btn-default' %>
     </div>
   </div>
 
