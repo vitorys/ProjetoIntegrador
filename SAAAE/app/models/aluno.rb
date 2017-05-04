@@ -1,3 +1,3 @@
 class Aluno < ApplicationRecord
-  belongs_to :pessoa
+  has_one :pessoa
 end

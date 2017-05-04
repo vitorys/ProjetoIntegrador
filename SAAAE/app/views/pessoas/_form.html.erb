@@ -60,7 +60,7 @@
   <div class="form-group">
     <%= f.label :documento_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :documento_id, :class => 'form-control' %>
+    <%= f.collection_select :documento_id, Documento.all, :id, :doc_rg %>
     </div>
     <%=f.error_span(:documento_id) %>
   </div>
