@@ -15,6 +15,7 @@ class PessoasController < ApplicationController
   # GET /pessoas/new
   def new
     @pessoa = Pessoa.new
+    @pessoa.build_documento
     @pessoa.build_usuario
   end
 
@@ -70,6 +71,6 @@ class PessoasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pessoa_params
-      params.require(:pessoa).permit(:pessoa_nome, :pessoa_endereco, :pessoa_cidade, :pessoa_estado, :pessoa_cep, :pessoa_email, :documento_id, :usuario_attributes => [:email, :password])
+      params.require(:pessoa).permit(:pessoa_nome, :pessoa_sexo, :pessoa_endereco, :pessoa_cidade, :pessoa_estado, :pessoa_cep, :documento_attributes => [:doc_rg, :doc_cpf], :usuario_attributes => [:email, :password, :password_confirmation])
     end
 end

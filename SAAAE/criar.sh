@@ -1,14 +1,11 @@
 rake db:drop
 rake db:create
-rails g scaffold Documento doc_rg:string doc_cpf:string
+rails g scaffold Pessoa pessoa_nome:string pessoa_sexo:string pessoa_endereco:string pessoa_cidade:string pessoa_estado:string pessoa_cep:string
 rake db:migrate
 rails g bootstrap:themed Documentos
-rails g scaffold Pessoa pessoa_nome:string pessoa_endereco:string pessoa_cidade:string pessoa_estado:string pessoa_cep:string pessoa_email:string documento:references
+rails g scaffold Documento doc_rg:string doc_cpf:string pessoas:references
 rake db:migrate
 rails g bootstrap:themed Pessoas
-rails g scaffold Credencial credencial_senha pessoa:references
-rake db:migrate
-rails g bootstrap:themed Credencials
 rails g scaffold Aluno aluno_ra:integer aluno_curso:string aluno_data_ingresso:date aluno_periodo:integer aluno_frequencia:float aluno_coeficiente:float pessoa:references
 rake db:migrate
 rails g bootstrap:themed Alunos

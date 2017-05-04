@@ -15,7 +15,6 @@ class DocumentosController < ApplicationController
   # GET /documentos/new
   def new
     @documento = Documento.new
-    @documento.build_pessoa
   end
 
   # GET /documentos/1/edit
@@ -70,6 +69,6 @@ class DocumentosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def documento_params
-      params.require(:documento).permit(:doc_rg, :doc_cpf, :pessoa_attributes => [:pessoa_nome, :pessoa_endereco, :pessoa_cidade, :pessoa_estado,:pessoa_cep, :pessoa_email])
+      params.require(:documento).permit(:doc_rg, :doc_cpf)
     end
 end

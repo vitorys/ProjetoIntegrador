@@ -3,7 +3,7 @@
 one:
   aluno_ra: 1
   aluno_curso: MyString
-  aluno_data_ingresso: 2017-04-25
+  aluno_data_ingresso: 2017-05-04
   aluno_periodo: 1
   aluno_frequencia: 1.5
   aluno_coeficiente: 1.5
@@ -12,7 +12,7 @@ one:
 two:
   aluno_ra: 1
   aluno_curso: MyString
-  aluno_data_ingresso: 2017-04-25
+  aluno_data_ingresso: 2017-05-04
   aluno_periodo: 1
   aluno_frequencia: 1.5
   aluno_coeficiente: 1.5

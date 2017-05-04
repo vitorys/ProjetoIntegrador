@@ -30,54 +30,6 @@
     <%=f.error_span(:doc_cpf) %>
   </div>
 
-  <%=f.fields_for :pessoa do |ff|%>
-    <div class="form-group">
-    <%= ff.label :pessoa_nome, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= ff.text_field :pessoa_nome, :class => 'form-control' %>
-    </div>
-    <%=ff.error_span(:pessoa_nome) %>
-  </div>
-  <div class="form-group">
-    <%= ff.label :pessoa_endereco, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= ff.text_field :pessoa_endereco, :class => 'form-control' %>
-    </div>
-    <%=ff.error_span(:pessoa_endereco) %>
-  </div>
-  <div class="form-group">
-    <%= ff.label :pessoa_cidade, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= ff.text_field :pessoa_cidade, :class => 'form-control' %>
-    </div>
-    <%=ff.error_span(:pessoa_cidade) %>
-  </div>
-  <div class="form-group">
-    <%= ff.label :pessoa_estado, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= ff.text_field :pessoa_estado, :class => 'form-control' %>
-    </div>
-    <%=ff.error_span(:pessoa_estado) %>
-  </div>
-  <div class="form-group">
-    <%= ff.label :pessoa_cep, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= ff.text_field :pessoa_cep, :class => 'form-control' %>
-    </div>
-    <%=ff.error_span(:pessoa_cep) %>
-  </div>
-  <div class="form-group">
-    <%= ff.label :pessoa_email, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= ff.text_field :pessoa_email, :class => 'form-control' %>
-    </div>
-    <%=ff.error_span(:pessoa_email) %>
-  </div>
-  
-
-  <%end%>
-  
-
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>

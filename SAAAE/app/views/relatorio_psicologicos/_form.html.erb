@@ -15,32 +15,7 @@
     </div>
   <% end %>
 
-  <%= f.fields_for :relatorio do |relatorio| %> 
-    <div class="form-group">
-    <%= relatorio.label :relatorio_data, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= relatorio.text_field :relatorio_data, :class => 'form-control' %>
-    </div>
-    <%=relatorio.error_span(:relatorio_data) %>
-  </div>
   <div class="form-group">
-    <%= relatorio.label :aluno_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= relatorio.collection_select :aluno, Aluno.all, :id, :aluno_nome %>
-    </div>
-    <%=relatorio.error_span(:aluno_id) %>
-  </div>
-  <div class="form-group">
-    <%= relatorio.label :funcionario_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= relatorio.text_field :funcionario_id, :class => 'form-control' %>
-    </div>
-    <%=relatorio.error_span(:funcionario_id) %>
-  </div>
-
-  <% end %>
-
-  <div class="form-group">  
     <%= f.label :rp_objetivo, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :rp_objetivo, :class => 'form-control' %>
@@ -71,4 +46,3 @@
   </div>
 
 <% end %>
-  
