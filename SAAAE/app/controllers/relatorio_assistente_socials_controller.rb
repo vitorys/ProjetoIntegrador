@@ -15,6 +15,7 @@ class RelatorioAssistenteSocialsController < ApplicationController
   # GET /relatorio_assistente_socials/new
   def new
     @relatorio_assistente_social = RelatorioAssistenteSocial.new
+    @relatorio_assistente_social.build_relatorio
   end
 
   # GET /relatorio_assistente_socials/1/edit
@@ -69,6 +70,6 @@ class RelatorioAssistenteSocialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def relatorio_assistente_social_params
-      params.require(:relatorio_assistente_social).permit(:ras_motivo, :ras_entrevista, :relatorio_id)
+      params.require(:relatorio_assistente_social).permit(:ras_motivo, :ras_entrevista, :relatorio_id, :relatorio_attributes => [:relatorio_data, :aluno_id, :funcionario_id])
     end
 end

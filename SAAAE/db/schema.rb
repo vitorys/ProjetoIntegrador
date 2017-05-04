@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504004223) do
+ActiveRecord::Schema.define(version: 20170504233706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,15 @@ ActiveRecord::Schema.define(version: 20170504004223) do
     t.index ["relatorio_id"], name: "index_relatorio_gerals_on_relatorio_id", using: :btree
   end
 
+  create_table "relatorio_pedagogicos", force: :cascade do |t|
+    t.text     "rpe_objetivo"
+    t.text     "rpe_atendimento"
+    t.integer  "relatorio_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["relatorio_id"], name: "index_relatorio_pedagogicos_on_relatorio_id", using: :btree
+  end
+
   create_table "relatorio_psicologicos", force: :cascade do |t|
     t.text     "rp_objetivo"
     t.text     "rp_atendimento"
@@ -121,6 +130,7 @@ ActiveRecord::Schema.define(version: 20170504004223) do
   add_foreign_key "pessoas", "usuarios"
   add_foreign_key "relatorio_assistente_socials", "relatorios"
   add_foreign_key "relatorio_gerals", "relatorios"
+  add_foreign_key "relatorio_pedagogicos", "relatorios"
   add_foreign_key "relatorio_psicologicos", "relatorios"
   add_foreign_key "relatorios", "alunos"
   add_foreign_key "relatorios", "funcionarios"

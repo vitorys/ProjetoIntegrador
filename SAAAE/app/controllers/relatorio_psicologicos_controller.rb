@@ -15,6 +15,7 @@ class RelatorioPsicologicosController < ApplicationController
   # GET /relatorio_psicologicos/new
   def new
     @relatorio_psicologico = RelatorioPsicologico.new
+    @relatorio_psicologico.build_relatorio
   end
 
   # GET /relatorio_psicologicos/1/edit
@@ -69,6 +70,6 @@ class RelatorioPsicologicosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def relatorio_psicologico_params
-      params.require(:relatorio_psicologico).permit(:rp_objetivo, :rp_atendimento, :relatorio_id)
+      params.require(:relatorio_psicologico).permit(:rp_objetivo, :rp_atendimento, :relatorio_id, :relatorio_attributes => [:relatorio_data, :aluno_id, :funcionario_id])
     end
 end

@@ -29,13 +29,29 @@
     </div>
     <%=f.error_span(:rp_atendimento) %>
   </div>
+
+  <%= f.fields_for :relatorio do |ff| %>
   <div class="form-group">
-    <%= f.label :relatorio_id, :class => 'control-label col-lg-2' %>
+    <%= ff.label :relatorio_data, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :relatorio_id, :class => 'form-control' %>
+      <%= ff.text_field :relatorio_data, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:relatorio_id) %>
+    <%=ff.error_span(:relatorio_data) %>
   </div>
+  <div class="form-group">
+    <%= ff.label :aluno_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= ff.collection_select(:aluno_id, Aluno.all, :id, :aluno_nome, {:prompt => 'Selecione o aluno'})%>  
+    </div>
+    <%=ff.error_span(:aluno_id) %>
+  </div>
+  <div class="form-group">
+    <%= ff.label :funcionario_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+<%= ff.collection_select(:funcionario_id, Funcionario.all, :id, :funcionario_nome, {:prompt => 'Selecione o funcionário'})%>      </div>
+    <%=ff.error_span(:funcionario_id) %>
+  </div>
+<% end %>
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">

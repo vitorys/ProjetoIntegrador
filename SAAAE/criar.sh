@@ -21,6 +21,9 @@ rails g bootstrap:themed relatorio_assistente_socials
 rails g scaffold RelatorioPsicologico rp_objetivo:text rp_atendimento:text relatorio:references
 rake db:migrate
 rails g bootstrap:themed relatorio_psicologicos
+rails g scaffold RelatorioPedagogico rpe_objetivo:text rpe_atendimento:text relatorio:references
+rake db:migrate
+rails g bootstrap:themed relatorio_pedagogicos
 rails g scaffold RelatorioGeral rg_objetivo:text rg_atendimento:text relatorio:references
 rake db:migrate
 rails g bootstrap:themed relatorio_gerals
