@@ -1,15 +1,14 @@
 <%- model_class = RelatorioPsicologico -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<h1>Relatórios Psicológicos</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:rp_objetivo) %></th>
-      <th><%= model_class.human_attribute_name(:rp_atendimento) %></th>
-      <th><%= model_class.human_attribute_name(:relatorio_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>ID</th>
+      <th>Objetivo</th>
+      <th>Atendimento</th>
+      <th>Data de Criação</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -19,7 +18,6 @@
         <td><%= link_to relatorio_psicologico.id, relatorio_psicologico_path(relatorio_psicologico) %></td>
         <td><%= relatorio_psicologico.rp_objetivo %></td>
         <td><%= relatorio_psicologico.rp_atendimento %></td>
-        <td><%= relatorio_psicologico.relatorio_id %></td>
         <td><%=l relatorio_psicologico.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

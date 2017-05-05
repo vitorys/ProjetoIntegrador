@@ -1,16 +1,16 @@
 <%- model_class = Funcionario -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Funcionários</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:funcionario_rf) %></th>
-      <th><%= model_class.human_attribute_name(:funcionario_area) %></th>
-      <th><%= model_class.human_attribute_name(:funcionario_permissao) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>ID</th>
+      <th>Registro do Funcionário</th>
+      <th>Área</th>
+      <th>Permissão</th>
+      <th>ID da Pessoa</th>
+      <th>Data de Criação</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>

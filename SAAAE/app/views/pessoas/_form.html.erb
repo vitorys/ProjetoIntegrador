@@ -16,42 +16,42 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :pessoa_nome, :class => 'control-label col-lg-2' %>
+    <%= f.label :pessoa_nome,'Nome :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :pessoa_nome, :class => 'form-control' %>
     </div>
     <%=f.error_span(:pessoa_nome) %>
   </div>
   <div class="form-group">
-    <%= f.label :pessoa_sexo, :class => 'control-label col-lg-2' %>
+    <%= f.label :pessoa_sexo,'Sexo :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-    <%= f.select(:pessoa_sexo, [['Feminino', 'F'], ['Masculino', 'M']]) %>
+    <%= f.select(:pessoa_sexo, [['Feminino', 'F'], ['Masculino', 'M']], {:prompt => 'Selecione o sexo'})%>
     </div>
     <%=f.error_span(:pessoa_sexo) %>
   </div>
   <div class="form-group">
-    <%= f.label :pessoa_endereco, :class => 'control-label col-lg-2' %>
+    <%= f.label :pessoa_endereco,'Endereço : :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :pessoa_endereco, :class => 'form-control' %>
     </div>
     <%=f.error_span(:pessoa_endereco) %>
   </div>
   <div class="form-group">
-    <%= f.label :pessoa_cidade, :class => 'control-label col-lg-2' %>
+    <%= f.label :pessoa_cidade,'Cidade :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :pessoa_cidade, :class => 'form-control' %>
     </div>
     <%=f.error_span(:pessoa_cidade) %>
   </div>
   <div class="form-group">
-    <%= f.label :pessoa_estado, :class => 'control-label col-lg-2' %>
+    <%= f.label :pessoa_estado,'Estado :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :pessoa_estado, :class => 'form-control' %>
     </div>
     <%=f.error_span(:pessoa_estado) %>
   </div>
   <div class="form-group">
-    <%= f.label :pessoa_cep, :class => 'control-label col-lg-2' %>
+    <%= f.label :pessoa_cep,'CEP :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :pessoa_cep, :class => 'form-control' %>
     </div>
@@ -60,14 +60,14 @@
     
   <%= f.fields_for :documento do |ff| %>
   <div class="form-group">
-    <%= ff.label :doc_rg, :class => 'control-label col-lg-2' %>
+    <%= ff.label :doc_rg,'RG :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= ff.text_field :doc_rg, :class => 'form-control' %>
     </div>
     <%=ff.error_span(:doc_rg) %>
   </div>
   <div class="form-group">
-    <%= ff.label :doc_cpf, :class => 'control-label col-lg-2' %>
+    <%= ff.label :doc_cpf,'CPF :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= ff.text_field :doc_cpf, :class => 'form-control' %>
     </div>
@@ -77,14 +77,14 @@
 
   <%= f.fields_for :usuario do |fff| %>
     <div class="form-group">
-      <%= fff.label :email, :class => 'control-label col-lg-2' %>   
+      <%= fff.label :email,'Email :', :class => 'control-label col-lg-2' %>   
       <div class="col-lg-10">
           <%= fff.text_field :email, :class => 'form-control' %>
       </div>
       <%=fff.error_span(:email) %>   
     </div>
   <div class="field form-group">
-    <%= fff.label :password, :class => 'control-label col-lg-2' %>   
+    <%= fff.label :password,'Senha :', :class => 'control-label col-lg-2' %>   
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -95,7 +95,7 @@
   </div>
 
   <div class="field form-group">
-    <%= fff.label :password_confirmation, :class => 'control-label col-lg-2' %>
+    <%= fff.label :password_confirmation,'Confirmação da Senha', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= fff.password_field :password_confirmation, autocomplete: "off" %>
     </div>
