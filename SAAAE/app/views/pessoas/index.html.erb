@@ -1,18 +1,18 @@
 <%- model_class = Pessoa -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
+  <h1>Pessoas</h1>
+  </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_nome) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_endereco) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_cidade) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_estado) %></th>
-      <th><%= model_class.human_attribute_name(:pessoa_cep) %></th>
-      <th><%= model_class.human_attribute_name(:documento_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Endereço</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>CEP</th>
+      <th>ID do Documento</th>
+      <th>Data de Criação</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
