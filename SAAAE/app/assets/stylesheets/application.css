@@ -3527,7 +3527,7 @@ tbody.collapse.in {
   display: none;
   float: left;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 0px 0px;
   margin: 2px 0 0;
   list-style: none;
   font-size: 13px;
@@ -3547,13 +3547,12 @@ tbody.collapse.in {
 }
 .dropdown-menu .divider {
   height: 1px;
-  margin: 10.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 10px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.846;
@@ -3587,6 +3586,7 @@ tbody.collapse.in {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   cursor: not-allowed;
 }
+.dropdown:hover > .dropdown-menu,
 .open > .dropdown-menu {
   display: block;
 }
