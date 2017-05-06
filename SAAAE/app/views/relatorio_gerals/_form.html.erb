@@ -39,7 +39,7 @@
     <%=ff.error_span(:relatorio_data) %>
   </div>
   <div class="form-group">
-    <%= ff.label :aluno_id,'Aluno :' :class => 'control-label col-lg-2' %>
+    <%= ff.label :aluno_id,'Aluno :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= ff.collection_select(:aluno_id, Aluno.all, :id, :aluno_nome, {:prompt => 'Selecione o aluno'})%>  
     </div>
