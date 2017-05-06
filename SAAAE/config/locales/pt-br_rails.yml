@@ -219,3 +219,12 @@
       short: "%d de %B, %H:%M"
       year: "%B"
     pm: ''
+
+pt-BR:
+  activerecord:
+    errors:
+      models:
+        pessoa:
+          attributes:
+            documento:
+              invalid_cpf: "cpf_inválido"
