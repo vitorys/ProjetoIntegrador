@@ -53,11 +53,11 @@ ActiveRecord::Schema.define(version: 20170504233706) do
     t.string   "pessoa_estado"
     t.string   "pessoa_cep"
     t.integer  "documento_id"
-    t.integer  "usuario_id"
+    t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["documento_id"], name: "index_pessoas_on_documento_id", using: :btree
-    t.index ["usuario_id"], name: "index_pessoas_on_usuario_id", using: :btree
+    t.index ["user_id"], name: "index_pessoas_on_user_id", using: :btree
   end
 
   create_table "relatorio_assistente_socials", force: :cascade do |t|
@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(version: 20170504233706) do
     t.index ["funcionario_id"], name: "index_relatorios_on_funcionario_id", using: :btree
   end
 
-  create_table "usuarios", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -120,14 +120,14 @@ ActiveRecord::Schema.define(version: 20170504233706) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "permissao",              default: 0
-    t.index ["email"], name: "index_usuarios_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   add_foreign_key "alunos", "pessoas"
   add_foreign_key "funcionarios", "pessoas"
   add_foreign_key "pessoas", "documentos"
-  add_foreign_key "pessoas", "usuarios"
+  add_foreign_key "pessoas", "users"
   add_foreign_key "relatorio_assistente_socials", "relatorios"
   add_foreign_key "relatorio_gerals", "relatorios"
   add_foreign_key "relatorio_pedagogicos", "relatorios"

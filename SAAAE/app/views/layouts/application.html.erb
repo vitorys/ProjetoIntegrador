@@ -39,7 +39,7 @@
   <body>
         <div class="container-fluid">
       <!-- Static navbar -->
-      <% if usuario_signed_in? %>
+      <% if user_signed_in? %>
           <nav class="navbar navbar-default espaco">
             <div class="container-fluid">
               <div class="navbar-header">
@@ -77,7 +77,7 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><%= link_to "Sair", destroy_usuario_session_path, method: :delete, :class => 'navbar-link'  %></li>
+                  <li class="active"><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
                 </ul>
                 <% else %>
                 <% end %>
