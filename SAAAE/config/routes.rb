@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  get 'control_users/index'
+
   resources :relatorio_pedagogicos
   devise_for :users
   resources :relatorio_gerals
@@ -7,7 +11,6 @@ Rails.application.routes.draw do
   resources :relatorios
   resources :funcionarios
   resources :alunos
-  resources :credencials
   resources :pessoas
   resources :documentos
 
