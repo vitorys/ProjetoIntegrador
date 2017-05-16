@@ -60,8 +60,8 @@
   <div class="form-group">
     <%= f.label :pessoa_id,'ID da Pessoa :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :pessoa_id, :class => 'form-control' %>
-    </div>
+      <%= f.collection_select(:pessoa_id, Pessoa.all, :id, :pessoa_nome, {:prompt => 'Selecione a pessoa'})%>
+      </div>
     <%=f.error_span(:pessoa_id) %>
   </div>
 
