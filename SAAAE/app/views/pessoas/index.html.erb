@@ -25,7 +25,7 @@
         <td><%= pessoa.pessoa_cidade %></td>
         <td><%= pessoa.pessoa_estado %></td>
         <td><%= pessoa.pessoa_cep %></td>
-        <td><%= pessoa.documento_id %></td>
+        <td><%= link_to pessoa.documento_id, documento_path(pessoa.documento) %></td>
         <td><%=l pessoa.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

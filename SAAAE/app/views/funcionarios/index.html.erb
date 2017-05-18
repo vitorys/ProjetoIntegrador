@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
+      <th>Nome</th>
       <th>Registro do Funcionário</th>
       <th>Área</th>
       <th>Permissão</th>
@@ -17,7 +17,7 @@
   <tbody>
     <% @funcionarios.each do |funcionario| %>
       <tr>
-        <td><%= link_to funcionario.id, funcionario_path(funcionario) %></td>
+        <td><%= link_to findFuncionario(funcionario.id).pessoa.pessoa_nome, funcionario_path(funcionario) %></td>
         <td><%= funcionario.funcionario_rf %></td>
         <td><%= funcionario.funcionario_area %></td>
         <td><%= funcionario.funcionario_permissao %></td>

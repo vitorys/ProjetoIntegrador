@@ -41,14 +41,15 @@
   <div class="form-group">
     <%= ff.label :aluno_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= ff.collection_select(:aluno_id, Aluno.all, :id, :aluno_nome, {:prompt => 'Selecione o aluno'})%>  
+    <%= ff.select :aluno_id, options_for_select(Aluno.all.map{|a|[a.pessoa.pessoa_nome, a.id]}), {:prompt => 'Selecione o aluno'}%>
     </div>
     <%=ff.error_span(:aluno_id) %>
   </div>
   <div class="form-group">
     <%= ff.label :funcionario_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-<%= ff.collection_select(:funcionario_id, Funcionario.all, :id, :funcionario_nome, {:prompt => 'Selecione o funcionário'})%>      </div>
+    <%= ff.select :funcionario_id, options_for_select(Funcionario.all.map{|f|[f.pessoa.pessoa_nome, f.id]}), {:prompt => 'Selecione o Funcionário'}%>
+</div>
     <%=ff.error_span(:funcionario_id) %>
   </div>
 <% end %>

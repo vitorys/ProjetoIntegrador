@@ -25,7 +25,7 @@
   <div class="form-group">
     <%= f.label :funcionario_area,'Área :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :funcionario_area, :class => 'form-control' %>
+    <%= f.select(:funcionario_area, [['Psicólogo(a)', 'Psicólogo(a)'], ['Pedagogo(a)', 'Pedagogo(a)'], ['Assistente Social', 'Assistente Social']], {:prompt => 'Selecione a área'}) %>
     </div>
     <%=f.error_span(:funcionario_area) %>
   </div>
