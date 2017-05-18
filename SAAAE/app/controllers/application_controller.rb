@@ -12,12 +12,12 @@ class ApplicationController < ActionController::Base
 			redirect_to(request.referrer || root_path)	
 	end
 
-	helper_method :foundPessoa
+	helper_method :findPessoa
 
-	def foundPessoa(id)
+	def findPessoa(id)
 		@pessoas = Pessoa.all
-		@pessoas.each do |pessoa|
 		@teste
+		@pessoas.each do |pessoa|
 			if pessoa.id == id
 				@teste = pessoa
 			end
@@ -25,9 +25,8 @@ class ApplicationController < ActionController::Base
 		@teste
 	end
 
-	helper_method :foundAluno
-
-	def foundAluno(id)
+	helper_method :findAluno
+	def findAluno(id)
 		@alunos = Aluno.all
 		@alunos.each do |aluno|
 			if aluno.id == id
@@ -36,6 +35,18 @@ class ApplicationController < ActionController::Base
 		end
 		@return
 	end
+
+	helper_method :findFuncionario
+	def findFuncionario(id)
+		@funcionarios = Funcionario.all
+		@r
+		@funcionarios.each do |funcionario|
+			if funcionario.id == id
+			 	@r = funcionario
+			 end
+		end
+		@r
+	end 
 
 	def after_sign_in_path_for(resource_or_scope)
 		welcome_index_path

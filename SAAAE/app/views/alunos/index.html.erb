@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
+      <th>Nome</th>
       <th>RA</th>
       <th>Curso</th>
       <th>Data de Ingresso</th>
@@ -20,7 +20,7 @@
   <tbody>
     <% @alunos.each do |aluno| %>
       <tr>
-        <td><%= link_to aluno.id, aluno_path(aluno) %></td>
+        <td><%= link_to findAluno(aluno.id).pessoa.pessoa_nome, aluno_path(aluno) %></td>
         <td><%= aluno.aluno_ra %></td>
         <td><%= aluno.aluno_curso %></td>
         <td><%= aluno.aluno_data_ingresso %></td>
