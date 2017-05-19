@@ -5707,7 +5707,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: #337AB7;
   border-color: #2196f3;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
@@ -5743,7 +5743,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-info > .panel-heading {
   color: #ffffff;
-  background-color: #9c27b0;
+  background-color: #D9EDF7;
   border-color: #cba4dd;
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {

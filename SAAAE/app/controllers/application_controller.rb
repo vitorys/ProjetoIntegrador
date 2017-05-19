@@ -48,6 +48,65 @@ class ApplicationController < ActionController::Base
 		@r
 	end 
 
+	helper_method :findRelatorios
+	def findRelatorios(id)
+		@relatorios = Relatorio.all
+		arr = Array.new
+		@relatorios.each do |relatorio|
+			if relatorio.funcionario_id == id
+				arr.push(relatorio)
+			end
+		end
+		return arr
+	end
+
+	helper_method :findRelatorioGeral
+	def findRelatorioGeral(id)
+		@rg = RelatorioGeral.all
+
+		@rg.each do |r|
+			if r.relatorio_id == id
+				return r
+			end
+		end
+	end
+
+
+	helper_method :findRelatorioPsicologico
+	def findRelatorioPsicologico(id)
+		@rg = RelatorioPsicologico.all
+
+		@rg.each do |r|
+			if r.relatorio_id == id
+				return r
+			end
+		end
+	end
+
+
+	helper_method :findRelatorioPedagogico
+	def findRelatorioPedagogico(id)
+		@rg = RelatorioPedagogico.all
+
+		@rg.each do |r|
+			if r.relatorio_id == id
+				return r
+			end
+		end
+	end
+
+
+	helper_method :findRelatorioAssistenteSocial
+	def findRelatorioAssistenteSocial(id)
+		@rg = RelatorioAssistenteSocial.all
+
+		@rg.each do |r|
+			if r.relatorio_id == id
+				return r
+			end
+		end
+	end
+
 	def after_sign_in_path_for(resource_or_scope)
 		welcome_index_path
 	end
