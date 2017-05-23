@@ -20,14 +20,14 @@
     <div class="col-lg-10">
       <%= f.text_field :ras_motivo, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:ras_motivo) %>
+    <!--<%=f.error_span(:ras_motivo) %>-->
   </div>
   <div class="form-group">
     <%= f.label :ras_entrevista,'Entrevista :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :ras_entrevista, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:ras_entrevista) %>
+    <!--<%=f.error_span(:ras_entrevista) %>-->
   </div>
 
   <%= f.fields_for :relatorio do |ff| %>
@@ -36,21 +36,21 @@
     <div class="col-lg-10">
       <%= ff.text_field :relatorio_data, :class => 'form-control' %>
     </div>
-    <%=ff.error_span(:relatorio_data) %>
+    <!--<%=ff.error_span(:relatorio_data) %>-->
   </div>
   <div class="form-group">
     <%= ff.label :aluno_id,'Aluno :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
     <%= ff.select :aluno_id, options_for_select(Aluno.all.map{|a|[a.pessoa.pessoa_nome, a.id]}), {:prompt => 'Selecione o aluno'}%>    
     </div>
-    <%=ff.error_span(:aluno_id) %>
+    <!--<%=ff.error_span(:aluno_id) %>-->
   </div>
   <div class="form-group">
     <%= ff.label :funcionario_id,'Funcionário :', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
 <%= ff.select :funcionario_id, options_for_select(Funcionario.all.map{|f|[f.pessoa.pessoa_nome, f.id]}), {:prompt => 'Selecione o Funcionário'}%>
       </div>
-    <%=ff.error_span(:funcionario_id) %>
+    <!--<%=ff.error_span(:funcionario_id) %>-->
   </div>
 <% end %>
 
