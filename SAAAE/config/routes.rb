@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   resources :pessoas
   resources :documentos
 
+
+  get 'relatorio_gerals', to: 'relatorio_gerals#index', as: 'relatoriosgerais'
+
 devise_scope :user do
   root to: "devise/sessions#new"
 end
