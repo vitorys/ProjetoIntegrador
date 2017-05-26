@@ -11,7 +11,8 @@
       <th>Cidade</th>
       <th>Estado</th>
       <th>CEP</th>
-      <th>ID do Documento</th>
+      <th>RG</th>
+      <th>CPF</th>
       <th>Data de Criação</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -25,7 +26,8 @@
         <td><%= pessoa.pessoa_cidade %></td>
         <td><%= pessoa.pessoa_estado %></td>
         <td><%= pessoa.pessoa_cep %></td>
-        <td><%= link_to pessoa.documento_id, documento_path(pessoa.documento) %></td>
+        <td><%= pessoa.documento.doc_cpf%></td>
+        <td><%= pessoa.documento.doc_rg%></td>
         <td><%=l pessoa.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
