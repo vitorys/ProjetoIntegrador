@@ -5,26 +5,37 @@ class RelatorioPsicologicosController < ApplicationController
   # GET /relatorio_psicologicos.json
   def index
     @relatorio_psicologicos = RelatorioPsicologico.all
+    authorize @relatorio_psicologicos
   end
 
   # GET /relatorio_psicologicos/1
   # GET /relatorio_psicologicos/1.json
   def show
+    @relatorio_psicologicos = RelatorioPsicologico.all
+    authorize @relatorio_psicologicos
   end
 
   # GET /relatorio_psicologicos/new
   def new
+    @relatorio_psicologicos = RelatorioPsicologico.all
+    authorize @relatorio_psicologicos
+
     @relatorio_psicologico = RelatorioPsicologico.new
     @relatorio_psicologico.build_relatorio
   end
 
   # GET /relatorio_psicologicos/1/edit
   def edit
+    @relatorio_psicologicos = RelatorioPsicologico.all
+    authorize @relatorio_psicologicos
   end
 
   # POST /relatorio_psicologicos
   # POST /relatorio_psicologicos.json
   def create
+    @relatorio_psicologicos = RelatorioPsicologico.all
+    authorize @relatorio_psicologicos
+
     @relatorio_psicologico = RelatorioPsicologico.new(relatorio_psicologico_params)
 
     respond_to do |format|
@@ -41,6 +52,9 @@ class RelatorioPsicologicosController < ApplicationController
   # PATCH/PUT /relatorio_psicologicos/1
   # PATCH/PUT /relatorio_psicologicos/1.json
   def update
+    @relatorio_psicologicos = RelatorioPsicologico.all
+    authorize @relatorio_psicologicos
+
     respond_to do |format|
       if @relatorio_psicologico.update(relatorio_psicologico_params)
         format.html { redirect_to @relatorio_psicologico, notice: 'Relatorio psicologico was successfully updated.' }
@@ -55,6 +69,9 @@ class RelatorioPsicologicosController < ApplicationController
   # DELETE /relatorio_psicologicos/1
   # DELETE /relatorio_psicologicos/1.json
   def destroy
+    @relatorio_psicologicos = RelatorioPsicologico.all
+    authorize @relatorio_psicologicos
+
     @relatorio_psicologico.destroy
     respond_to do |format|
       format.html { redirect_to relatorio_psicologicos_url, notice: 'Relatorio psicologico was successfully destroyed.' }

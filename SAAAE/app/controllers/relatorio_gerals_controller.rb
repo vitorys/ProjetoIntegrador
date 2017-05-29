@@ -5,6 +5,7 @@ class RelatorioGeralsController < ApplicationController
   # GET /relatorio_gerals.json
   def index
     @relatorio_gerals = RelatorioGeral.all
+    authorize @relatorio_gerals
   end
 
   # GET /relatorio_gerals/1
@@ -14,6 +15,9 @@ class RelatorioGeralsController < ApplicationController
 
   # GET /relatorio_gerals/new
   def new
+    @relatorio_gerals = RelatorioGeral.all
+    authorize @relatorio_gerals
+
     @relatorio_geral = RelatorioGeral.new
     @relatorio_geral.build_relatorio
   end
@@ -25,6 +29,9 @@ class RelatorioGeralsController < ApplicationController
   # POST /relatorio_gerals
   # POST /relatorio_gerals.json
   def create
+    @relatorio_gerals = RelatorioGeral.all
+    authorize @relatorio_gerals
+
     @relatorio_geral = RelatorioGeral.new(relatorio_geral_params)
 
     respond_to do |format|
@@ -41,6 +48,9 @@ class RelatorioGeralsController < ApplicationController
   # PATCH/PUT /relatorio_gerals/1
   # PATCH/PUT /relatorio_gerals/1.json
   def update
+    @relatorio_gerals = RelatorioGeral.all
+    authorize @relatorio_gerals
+
     respond_to do |format|
       if @relatorio_geral.update(relatorio_geral_params)
         format.html { redirect_to @relatorio_geral, notice: 'Relatorio geral was successfully updated.' }
@@ -55,6 +65,9 @@ class RelatorioGeralsController < ApplicationController
   # DELETE /relatorio_gerals/1
   # DELETE /relatorio_gerals/1.json
   def destroy
+    @relatorio_gerals = RelatorioGeral.all
+    authorize @relatorio_gerals
+
     @relatorio_geral.destroy
     respond_to do |format|
       format.html { redirect_to relatorio_gerals_url, notice: 'Relatorio geral was successfully destroyed.' }

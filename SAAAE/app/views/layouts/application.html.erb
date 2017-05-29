@@ -73,11 +73,12 @@
                       <li role="separator" class="divider"></li>
                       <li><%= link_to "Atendimento Assistente Social", relatorio_assistente_socials_path  %></li>      
                     </ul>
+                    <li><%= link_to "Usuários Cadastrados", controller_all_users_index_path %></li>
                   </li>
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+                  <li><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
                 </ul>
                 <% else %>
                 <% end %>
