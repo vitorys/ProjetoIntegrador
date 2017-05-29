@@ -5,26 +5,37 @@ class RelatorioAssistenteSocialsController < ApplicationController
   # GET /relatorio_assistente_socials.json
   def index
     @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    authorize @relatorio_assistente_socials
   end
 
   # GET /relatorio_assistente_socials/1
   # GET /relatorio_assistente_socials/1.json
   def show
+    @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    authorize @relatorio_assistente_socials
   end
 
   # GET /relatorio_assistente_socials/new
   def new
+    @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    authorize @relatorio_assistente_socials
+
     @relatorio_assistente_social = RelatorioAssistenteSocial.new
     @relatorio_assistente_social.build_relatorio
   end
 
   # GET /relatorio_assistente_socials/1/edit
   def edit
+    @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    authorize @relatorio_assistente_socials
   end
 
   # POST /relatorio_assistente_socials
   # POST /relatorio_assistente_socials.json
   def create
+    @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    authorize @relatorio_assistente_socials
+
     @relatorio_assistente_social = RelatorioAssistenteSocial.new(relatorio_assistente_social_params)
 
     respond_to do |format|
@@ -41,6 +52,10 @@ class RelatorioAssistenteSocialsController < ApplicationController
   # PATCH/PUT /relatorio_assistente_socials/1
   # PATCH/PUT /relatorio_assistente_socials/1.json
   def update
+
+    @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    authorize @relatorio_assistente_socials
+
     respond_to do |format|
       if @relatorio_assistente_social.update(relatorio_assistente_social_params)
         format.html { redirect_to @relatorio_assistente_social, notice: 'Relatorio assistente social was successfully updated.' }
@@ -55,6 +70,9 @@ class RelatorioAssistenteSocialsController < ApplicationController
   # DELETE /relatorio_assistente_socials/1
   # DELETE /relatorio_assistente_socials/1.json
   def destroy
+    @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    authorize @relatorio_assistente_socials
+
     @relatorio_assistente_social.destroy
     respond_to do |format|
       format.html { redirect_to relatorio_assistente_socials_url, notice: 'Relatorio assistente social was successfully destroyed.' }

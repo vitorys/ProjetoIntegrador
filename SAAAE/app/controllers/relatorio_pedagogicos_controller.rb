@@ -5,26 +5,37 @@ class RelatorioPedagogicosController < ApplicationController
   # GET /relatorio_pedagogicos.json
   def index
     @relatorio_pedagogicos = RelatorioPedagogico.all
+    authorize @relatorio_pedagogicos
   end
 
   # GET /relatorio_pedagogicos/1
   # GET /relatorio_pedagogicos/1.json
   def show
+    @relatorio_pedagogicos = RelatorioPedagogico.all
+    authorize @relatorio_pedagogicos
   end
 
   # GET /relatorio_pedagogicos/new
   def new
+    @relatorio_pedagogicos = RelatorioPedagogico.all
+    authorize @relatorio_pedagogicos
+
     @relatorio_pedagogico = RelatorioPedagogico.new
     @relatorio_pedagogico.build_relatorio
   end
 
   # GET /relatorio_pedagogicos/1/edit
   def edit
+    @relatorio_pedagogicos = RelatorioPedagogico.all
+    authorize @relatorio_pedagogicos
   end
 
   # POST /relatorio_pedagogicos
   # POST /relatorio_pedagogicos.json
   def create
+    @relatorio_pedagogicos = RelatorioPedagogico.all
+    authorize @relatorio_pedagogicos
+
     @relatorio_pedagogico = RelatorioPedagogico.new(relatorio_pedagogico_params)
 
     respond_to do |format|
@@ -41,6 +52,9 @@ class RelatorioPedagogicosController < ApplicationController
   # PATCH/PUT /relatorio_pedagogicos/1
   # PATCH/PUT /relatorio_pedagogicos/1.json
   def update
+    @relatorio_pedagogicos = RelatorioPedagogico.all
+    authorize @relatorio_pedagogicos
+
     respond_to do |format|
       if @relatorio_pedagogico.update(relatorio_pedagogico_params)
         format.html { redirect_to @relatorio_pedagogico, notice: 'Relatorio pedagogico was successfully updated.' }
@@ -55,6 +69,9 @@ class RelatorioPedagogicosController < ApplicationController
   # DELETE /relatorio_pedagogicos/1
   # DELETE /relatorio_pedagogicos/1.json
   def destroy
+    @relatorio_pedagogicos = RelatorioPedagogico.all
+    authorize @relatorio_pedagogicos
+
     @relatorio_pedagogico.destroy
     respond_to do |format|
       format.html { redirect_to relatorio_pedagogicos_url, notice: 'Relatorio pedagogico was successfully destroyed.' }

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'controller_all_users/index'
+
   get 'welcome/index'
 
   get 'control_users/index'

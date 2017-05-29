@@ -15,6 +15,20 @@ class FuncionariosController < ApplicationController
   # GET /funcionarios/new
   def new
     @funcionario = Funcionario.new
+
+    if @funcionario.funcionario_area == 'Psicólogo(a)'
+      @funcionario.pessoa.user.role = 2
+    end
+    
+    if @funcionario.funcionario_area == 'Pedagogo(a)'
+      @funcionario.pessoa.user.role = 1
+    end
+
+    if @funcionario.funcionario_area == 'Assistente Social'
+      @funcionario.pessoa.user.role = 3
+    end
+
+    @funcionario.save
   end
 
   # GET /funcionarios/1/edit
