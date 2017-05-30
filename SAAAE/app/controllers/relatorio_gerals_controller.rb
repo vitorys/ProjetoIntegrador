@@ -36,7 +36,7 @@ class RelatorioGeralsController < ApplicationController
 
     respond_to do |format|
       if @relatorio_geral.save
-        format.html { redirect_to @relatorio_geral, notice: 'Relatorio geral was successfully created.' }
+        format.html { redirect_to @relatorio_geral, notice: 'Relatório geral criado com sucesso!' }
         format.json { render :show, status: :created, location: @relatorio_geral }
       else
         format.html { render :new }
@@ -53,7 +53,7 @@ class RelatorioGeralsController < ApplicationController
 
     respond_to do |format|
       if @relatorio_geral.update(relatorio_geral_params)
-        format.html { redirect_to @relatorio_geral, notice: 'Relatorio geral was successfully updated.' }
+        format.html { redirect_to @relatorio_geral, notice: 'Relatório geral atualizado com sucesso!' }
         format.json { render :show, status: :ok, location: @relatorio_geral }
       else
         format.html { render :edit }
@@ -70,7 +70,7 @@ class RelatorioGeralsController < ApplicationController
 
     @relatorio_geral.destroy
     respond_to do |format|
-      format.html { redirect_to relatorio_gerals_url, notice: 'Relatorio geral was successfully destroyed.' }
+      format.html { redirect_to relatorio_gerals_url, notice: 'Relatório geral deletado com sucesso!' }
       format.json { head :no_content }
     end
   end

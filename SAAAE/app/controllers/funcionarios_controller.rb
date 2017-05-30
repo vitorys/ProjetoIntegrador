@@ -16,19 +16,6 @@ class FuncionariosController < ApplicationController
   def new
     @funcionario = Funcionario.new
 
-    if @funcionario.funcionario_area == 'Psicólogo(a)'
-      @funcionario.pessoa.user.role = 2
-    end
-    
-    if @funcionario.funcionario_area == 'Pedagogo(a)'
-      @funcionario.pessoa.user.role = 1
-    end
-
-    if @funcionario.funcionario_area == 'Assistente Social'
-      @funcionario.pessoa.user.role = 3
-    end
-
-    @funcionario.save
   end
 
   # GET /funcionarios/1/edit
@@ -42,8 +29,23 @@ class FuncionariosController < ApplicationController
 
     respond_to do |format|
       if @funcionario.save
-        format.html { redirect_to @funcionario, notice: 'Funcionario was successfully created.' }
+        format.html { redirect_to @funcionario, notice: 'Funcionário(a) criado com sucesso!.' }
         format.json { render :show, status: :created, location: @funcionario }
+      
+        if @funcionario.funcionario_area == 'Psicólogo(a)'
+          @funcionario.pessoa.user.role = 2
+        end
+    
+        if @funcionario.funcionario_area == 'Pedagogo(a)'
+          @funcionario.pessoa.user.role = 1
+        end
+
+        if @funcionario.funcionario_area == 'Assistente Social'
+          @funcionario.pessoa.user.role = 3
+        end
+        @funcionario.pessoa.user.save
+        @funcionario.save
+      
       else
         format.html { render :new }
         format.json { render json: @funcionario.errors, status: :unprocessable_entity }
@@ -56,7 +58,7 @@ class FuncionariosController < ApplicationController
   def update
     respond_to do |format|
       if @funcionario.update(funcionario_params)
-        format.html { redirect_to @funcionario, notice: 'Funcionario was successfully updated.' }
+        format.html { redirect_to @funcionario, notice: 'Funcionário(a) atualizado(a) com sucesso' }
         format.json { render :show, status: :ok, location: @funcionario }
       else
         format.html { render :edit }
@@ -70,7 +72,7 @@ class FuncionariosController < ApplicationController
   def destroy
     @funcionario.destroy
     respond_to do |format|
-      format.html { redirect_to funcionarios_url, notice: 'Funcionario was successfully destroyed.' }
+      format.html { redirect_to funcionarios_url, notice: 'Funcionário deletado com sucesso!' }
       format.json { head :no_content }
     end
   end

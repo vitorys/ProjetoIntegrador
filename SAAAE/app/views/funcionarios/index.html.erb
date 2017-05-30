@@ -8,8 +8,6 @@
       <th>Nome</th>
       <th>Registro do Funcionário</th>
       <th>Área</th>
-      <th>Permissão</th>
-      <th>ID da Pessoa</th>
       <th>Data de Criação</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -20,8 +18,6 @@
         <td><%= link_to findFuncionario(funcionario.id).pessoa.pessoa_nome, funcionario_path(funcionario) %></td>
         <td><%= funcionario.funcionario_rf %></td>
         <td><%= funcionario.funcionario_area %></td>
-        <td><%= funcionario.funcionario_permissao %></td>
-        <td><%= funcionario.pessoa_id %></td>
         <td><%=l funcionario.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

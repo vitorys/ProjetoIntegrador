@@ -40,7 +40,7 @@ class RelatorioAssistenteSocialsController < ApplicationController
 
     respond_to do |format|
       if @relatorio_assistente_social.save
-        format.html { redirect_to @relatorio_assistente_social, notice: 'Relatorio assistente social was successfully created.' }
+        format.html { redirect_to @relatorio_assistente_social, notice: 'Relatório de assistência social criado com sucesso!' }
         format.json { render :show, status: :created, location: @relatorio_assistente_social }
       else
         format.html { render :new }
@@ -58,7 +58,7 @@ class RelatorioAssistenteSocialsController < ApplicationController
 
     respond_to do |format|
       if @relatorio_assistente_social.update(relatorio_assistente_social_params)
-        format.html { redirect_to @relatorio_assistente_social, notice: 'Relatorio assistente social was successfully updated.' }
+        format.html { redirect_to @relatorio_assistente_social, notice: 'Relatório de assistência social atualizado com sucesso!' }
         format.json { render :show, status: :ok, location: @relatorio_assistente_social }
       else
         format.html { render :edit }
@@ -75,7 +75,7 @@ class RelatorioAssistenteSocialsController < ApplicationController
 
     @relatorio_assistente_social.destroy
     respond_to do |format|
-      format.html { redirect_to relatorio_assistente_socials_url, notice: 'Relatorio assistente social was successfully destroyed.' }
+      format.html { redirect_to relatorio_assistente_socials_url, notice: 'Relatório de assistência social deletado com sucesso!' }
       format.json { head :no_content }
     end
   end

@@ -37,55 +37,29 @@
         <![endif]-->
     </head>
   <body>
-        <div class="container-fluid">
-      <!-- Static navbar -->
       <% if user_signed_in? %>
-          <nav class="navbar navbar-default espaco">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                </button>
-                <a class="navbar-brand" href="/welcome/index">NUAPE</a>
 
-              </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                  <!-- Abas  -->
-                 
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a> <!--- Dropdown cadastro -->
-                    <ul class="dropdown-menu">
-                      <li><%= link_to "Pessoa", pessoas_path  %></li>
-                      <li role="separator" class="divider"></li>
-                      <li><%= link_to "Aluno", alunos_path  %></li>
-                      <li role="separator" class="divider"></li>
-                      <li><%= link_to "Funcionário", funcionarios_path  %></li>
-                      <li role="separator" class="divider"></li>
-                    </ul>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atendimento <span class="caret"></span></a>
-                    <ul class="dropdown-menu"> <!--- Dropdown atendimento-->
-                      <li><%= link_to "Atendimento Geral", relatorio_gerals_path  %></li>
-                      <li role="separator" class="divider"></li>
-                      <li><%= link_to "Atendimento Pedagógico", relatorio_pedagogicos_path  %></li>
-                      <li role="separator" class="divider"></li>
-                      <li><%= link_to "Atendimento Psicológico", relatorio_psicologicos_path  %></li>
-                      <li role="separator" class="divider"></li>
-                      <li><%= link_to "Atendimento Assistente Social", relatorio_assistente_socials_path  %></li>      
-                    </ul>
-                    <li><%= link_to "Usuários Cadastrados", controller_all_users_index_path %></li>
-                  </li>
-                  </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-                </ul>
-                <% else %>
-                <% end %>
-              </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
-      </nav>
-        </div>
+        <% if current_user.admin?%>
+          <%= render 'renders/admin_screen' %>
+        <%end%>
+
+        <% if current_user.pedagogx?%>
+          <%= render 'renders/pedagogx_screen' %>
+        <%end%>
+
+        <% if current_user.psicologx?%>
+          <%= render 'renders/psicologx_screen' %>
+        <%end%>
+
+        <% if current_user.assistente_social?%>
+          <%= render 'renders/assistente_social_screen' %>
+        <%end%>
+
+        <% if current_user.aluno?%>
+          <%= render 'renders/aluno_screen' %>
+        <%end%>
+
+      <%end%>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12"><%= bootstrap_flash %><%= yield %></div>
