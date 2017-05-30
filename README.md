@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/vitorys/ProjetoIntegrador.png?label=ready&title=Ready)](https://waffle.io/vitorys/ProjetoIntegrador?utm_source=badge) [![Stories in Progress](https://badge.waffle.io/vitorys/ProjetoIntegrador.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/vitorys/ProjetoIntegrador) [![Stories Done](https://badge.waffle.io/vitorys/ProjetoIntegrador.svg?label=done&title=Done)](http://waffle.io/vitorys/ProjetoIntegrador)
+
 # Projeto Integrador
 #       Tutorial para o Git: http://rogerdudler.github.io/git-guide/index.pt_BR.html
 #	
