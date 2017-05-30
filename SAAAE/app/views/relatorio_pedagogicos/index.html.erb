@@ -8,6 +8,7 @@
       <th>ID</th>
       <th>Objetivo</th>
       <th>Atendimento</th>
+      <th>Funcionário Responsável</th>
       <th>Data de Criação</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -18,6 +19,7 @@
         <td><%= link_to relatorio_pedagogico.id, relatorio_pedagogico_path(relatorio_pedagogico) %></td>
         <td><%= relatorio_pedagogico.rpe_objetivo %></td>
         <td><%= relatorio_pedagogico.rpe_atendimento %></td>
+        <td><%=relatorio_pedagogico.relatorio.funcionario.pessoa.pessoa_nome%></td>
         <td><%=l relatorio_pedagogico.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

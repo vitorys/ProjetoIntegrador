@@ -40,7 +40,7 @@ class RelatorioPedagogicosController < ApplicationController
 
     respond_to do |format|
       if @relatorio_pedagogico.save
-        format.html { redirect_to @relatorio_pedagogico, notice: 'Relatorio pedagogico was successfully created.' }
+        format.html { redirect_to @relatorio_pedagogico, notice: 'Relatório pedagógico criado com sucesso!' }
         format.json { render :show, status: :created, location: @relatorio_pedagogico }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class RelatorioPedagogicosController < ApplicationController
 
     respond_to do |format|
       if @relatorio_pedagogico.update(relatorio_pedagogico_params)
-        format.html { redirect_to @relatorio_pedagogico, notice: 'Relatorio pedagogico was successfully updated.' }
+        format.html { redirect_to @relatorio_pedagogico, notice: 'Relatório pedagógico atualizado com sucesso!' }
         format.json { render :show, status: :ok, location: @relatorio_pedagogico }
       else
         format.html { render :edit }
@@ -74,7 +74,7 @@ class RelatorioPedagogicosController < ApplicationController
 
     @relatorio_pedagogico.destroy
     respond_to do |format|
-      format.html { redirect_to relatorio_pedagogicos_url, notice: 'Relatorio pedagogico was successfully destroyed.' }
+      format.html { redirect_to relatorio_pedagogicos_url, notice: 'Relatório pedagógico deletado com sucesso!' }
       format.json { head :no_content }
     end
   end

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+      <!-- Static navbar -->
+          <nav class="navbar navbar-default espaco">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                </button>
+                <a class="navbar-brand" href="/welcome/index">NUAPE</a>
+
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  <!-- Abas  -->
+
+                    <li><%= link_to "Relatórios de Assistência Social", relatorio_assistente_socials_path %></li>
+
+                    <li><%= link_to "Novo Relatório de Assistência Social", new_relatorio_assistente_social_path %></li>
+
+                    <li><%= link_to "Alunos Cadastrados", alunos_path %></li> 
+                  
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+                </ul>
+                <% else %>
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+      </nav>

@@ -40,7 +40,7 @@ class RelatorioPsicologicosController < ApplicationController
 
     respond_to do |format|
       if @relatorio_psicologico.save
-        format.html { redirect_to @relatorio_psicologico, notice: 'Relatorio psicologico was successfully created.' }
+        format.html { redirect_to @relatorio_psicologico, notice: 'Relatório psicológico criado com sucesso!' }
         format.json { render :show, status: :created, location: @relatorio_psicologico }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class RelatorioPsicologicosController < ApplicationController
 
     respond_to do |format|
       if @relatorio_psicologico.update(relatorio_psicologico_params)
-        format.html { redirect_to @relatorio_psicologico, notice: 'Relatorio psicologico was successfully updated.' }
+        format.html { redirect_to @relatorio_psicologico, notice: 'Relatório psicológico atualizado com sucesso!' }
         format.json { render :show, status: :ok, location: @relatorio_psicologico }
       else
         format.html { render :edit }
@@ -74,7 +74,7 @@ class RelatorioPsicologicosController < ApplicationController
 
     @relatorio_psicologico.destroy
     respond_to do |format|
-      format.html { redirect_to relatorio_psicologicos_url, notice: 'Relatorio psicologico was successfully destroyed.' }
+      format.html { redirect_to relatorio_psicologicos_url, notice: 'Relatório psicológico deletado com sucesso!' }
       format.json { head :no_content }
     end
   end
