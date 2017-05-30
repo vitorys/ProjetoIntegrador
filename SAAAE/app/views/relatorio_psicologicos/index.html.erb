@@ -8,6 +8,7 @@
       <th>ID</th>
       <th>Objetivo</th>
       <th>Atendimento</th>
+      <th>Funcionário Responsável</th>
       <th>Data de Criação</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -18,6 +19,7 @@
         <td><%= link_to relatorio_psicologico.id, relatorio_psicologico_path(relatorio_psicologico) %></td>
         <td><%= relatorio_psicologico.rp_objetivo %></td>
         <td><%= relatorio_psicologico.rp_atendimento %></td>
+        <td><%=relatorio_psicologico.relatorio.funcionario.pessoa.pessoa_nome%></td>
         <td><%=l relatorio_psicologico.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
