@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/vitorys/ProjetoIntegrador.png?label=ready&title=Ready)](https://waffle.io/vitorys/ProjetoIntegrador?utm_source=badge)
 # Projeto Integrador
 #       Tutorial para o Git: http://rogerdudler.github.io/git-guide/index.pt_BR.html
 #	
