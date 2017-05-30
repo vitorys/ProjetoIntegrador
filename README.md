@@ -1,5 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/vitorys/ProjetoIntegrador.png?label=ready&title=Ready)](https://waffle.io/vitorys/ProjetoIntegrador?utm_source=badge)[![Stories in Progress](https://badge.waffle.io/vitorys/ProjetoIntegrador.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/vitorys/ProjetoIntegrador)[![Stories Done](https://badge.waffle.io/vitorys/ProjetoIntegrador.svg?label=done&title=Done)](http://waffle.io/vitorys/ProjetoIntegrador)
-Delete vitorys/ProjetoIntegrador
+[![Stories in Ready](https://badge.waffle.io/vitorys/ProjetoIntegrador.png?label=ready&title=Ready)](https://waffle.io/vitorys/ProjetoIntegrador?utm_source=badge) [![Stories in Progress](https://badge.waffle.io/vitorys/ProjetoIntegrador.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/vitorys/ProjetoIntegrador) [![Stories Done](https://badge.waffle.io/vitorys/ProjetoIntegrador.svg?label=done&title=Done)](http://waffle.io/vitorys/ProjetoIntegrador)
 
 Deleting a project will remove all of its data from waffle.io and unregister its webhooks to GitHub. Deleting a project will not affect any data in the GitHub repos that are connected to it.
 
