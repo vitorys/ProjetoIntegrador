@@ -1,7 +1,5 @@
-<div class="panel panel-primary">
-    <div class="panel-heading">Mensagens</div>
-    
-    <div class="panel-body">
-    	Mensagens aqui
-    </div>
-</div>
+<% if current_user.pedagogx? || current_user.psicologx? || current_user.assistente_social?%>
+    <%= render 'renders/index/func_index' %>
+<%else%>
+	<%= render 'renders/index/admin_index' %>
+<%end%>
