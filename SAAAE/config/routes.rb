@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :atendimentos
   get 'controller_all_users/index'
 
   get 'welcome/index'
