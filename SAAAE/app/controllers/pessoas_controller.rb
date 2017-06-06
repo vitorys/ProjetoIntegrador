@@ -56,11 +56,22 @@ class PessoasController < ApplicationController
   # DELETE /pessoas/1
   # DELETE /pessoas/1.json
   def destroy
-    @pessoa.destroy
-    respond_to do |format|
-      format.html { redirect_to pessoas_url, notice: 'Pessoa deletada com sucesso!' }
-      format.json { head :no_content }
+    @p = Pessoa.where(user_id: current_user.id)
+    @x = @p.first
+
+    if @x == @pessoa
+      flash[:error] = "Você não pode se deletar pois é Administrador"
+      
+    else
+      @pessoa.destroy
+      flash[:success] = "Pessoa Deletada com sucesso!"
     end
+    redirect_to request.referrer
+    #@pessoa.destroy
+    #respond_to do |format|
+    #  format.html { redirect_to pessoas_url, notice: 'Pessoa deletada com sucesso!' }
+    #  format.json { head :no_content }
+    #end
   end
 
   private
