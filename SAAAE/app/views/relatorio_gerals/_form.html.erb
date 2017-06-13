@@ -18,7 +18,7 @@
   <div class="form-group">
     <%= f.label :rg_objetivo,'Objetivo : *', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :rg_objetivo, :class => 'form-control' %>
+      <%= f.collection_select(:rg_objetivo, Objetivo.all, :motivo, :motivo, {:prompt => 'Selecione o Motivo'})%>
     </div>
     <!--<%=f.error_span(:rg_objetivo) %>-->
   </div>

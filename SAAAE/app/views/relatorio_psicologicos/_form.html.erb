@@ -9,7 +9,7 @@
         <ul>
         <% @relatorio_psicologico.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
-        <% end %>
+        <% end %> 
         </ul>
       </div>
     </div>
@@ -18,7 +18,7 @@
   <div class="form-group">
     <%= f.label :rp_objetivo,'Objetivo : *', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :rp_objetivo, :class => 'form-control' %>
+      <%= f.collection_select(:rp_objetivo, Objetivo.all, :motivo, :motivo, {:prompt => 'Selecione o Motivo'})%>
     </div>
     <!--<%=f.error_span(:rp_objetivo) %>-->
   </div>

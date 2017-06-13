@@ -18,6 +18,8 @@
   <div class="form-group">
     <%= f.label :ras_motivo,'Motivo : *', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
+
+      <%= f.collection_select(:ras_motivo, Objetivo.all, :motivo, :motivo, {:prompt => 'Selecione o Motivo'})%>
       <%= f.text_field :ras_motivo, :class => 'form-control' %>
     </div>
     <!--<%=f.error_span(:ras_motivo) %>-->
