@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613002638) do
+ActiveRecord::Schema.define(version: 20170706215845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170613002638) do
     t.integer  "funcionario_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "telefone"
     t.index ["aluno_id"], name: "index_atendimentos_on_aluno_id", using: :btree
     t.index ["funcionario_id"], name: "index_atendimentos_on_funcionario_id", using: :btree
   end
@@ -48,10 +49,9 @@ ActiveRecord::Schema.define(version: 20170613002638) do
   create_table "funcionarios", force: :cascade do |t|
     t.integer  "funcionario_rf"
     t.string   "funcionario_area"
-    t.integer  "funcionario_permissao"
     t.integer  "pessoa_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.index ["pessoa_id"], name: "index_funcionarios_on_pessoa_id", using: :btree
   end
 

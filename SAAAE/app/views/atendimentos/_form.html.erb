@@ -22,6 +22,14 @@
     </div>
     <%=f.error_span(:aluno_id) %>
   </div>
+
+  <div class="form-group">
+    <%= f.label :telefone,'Telefone :*', :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :telefone, :class => 'form-control' %>
+    </div>
+  </div>
+
   <div class="form-group">
     <%= f.label :area,"Área :*", :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">

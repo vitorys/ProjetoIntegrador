@@ -1,0 +1,5 @@
+class Atendimento < ActiveRecord::Migration[5.0]
+  def change
+  	add_column :atendimentos, :telefone, :string
+  end
+end
