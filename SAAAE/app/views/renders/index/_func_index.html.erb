@@ -7,6 +7,7 @@
 			<tr>
 				<th>Aluno</th>
 				<th>Data</th>
+				<th>Telefone</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -15,12 +16,14 @@
     			<%if r.area == 'Psicólogo(a)' && current_user.role == 'psicologx'%> 
 					  	<tr>
 					        <td><%= r.aluno.pessoa.pessoa_nome %></td>
-					        <td><%=r.created_at%></td>
+					        <td><%=r.created_at%></td>					        
+					        <td><%= r.telefone %></td>
+
 					        <td><%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       atendimento_path(r),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Você tem certeza?')) },
-                      :class => 'btn btn-xs btn-danger' %></td>       
+                      :class => 'btn btn-xs btn-danger' %></td>		       
 					      </tr>
 
     			<%end%>
@@ -34,6 +37,7 @@
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Você tem certeza?')) },
                       :class => 'btn btn-xs btn-danger' %></td>     
+					      	<td><%= r.aluno.pessoa.pessoa_nome %></td>
 					      </tr>
 
     				
@@ -46,7 +50,8 @@
                       atendimento_path(r),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Você tem certeza?')) },
-                      :class => 'btn btn-xs btn-danger' %></td>         
+                      :class => 'btn btn-xs btn-danger' %></td>
+                      		<td><%= r.aluno.pessoa.pessoa_nome %></td>         
 					      </tr>
     			<%end%>
     		<%end%>	

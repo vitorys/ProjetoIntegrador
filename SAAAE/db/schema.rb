@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170707002214) do
     t.integer  "funcionario_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "telefone"
     t.index ["aluno_id"], name: "index_atendimentos_on_aluno_id", using: :btree
     t.index ["funcionario_id"], name: "index_atendimentos_on_funcionario_id", using: :btree
   end
