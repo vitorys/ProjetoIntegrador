@@ -5,16 +5,15 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:motivo) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+
+      <th>Motivo</th>
+      <th>Criado em</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @objetivos.each do |objetivo| %>
       <tr>
-        <td><%= link_to objetivo.id, objetivo_path(objetivo) %></td>
         <td><%= objetivo.motivo %></td>
         <td><%=l objetivo.created_at %></td>
         <td>
@@ -25,7 +24,7 @@
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       objetivo_path(objetivo),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Você tem certeza??')) },
                       :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>

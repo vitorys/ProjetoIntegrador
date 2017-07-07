@@ -12,7 +12,7 @@
 		<tbody>
     	<% @requisicoes = Atendimento.all %>
     		<% @requisicoes.each do |r| %>
-    			<%if r.area == 'Psicologo(a)' && current_user.role == 'psicologx'%> 
+    			<%if r.area == 'Psicólogo(a)' && current_user.role == 'psicologx'%> 
 					  	<tr>
 					        <td><%= r.aluno.pessoa.pessoa_nome %></td>
 					        <td><%=r.created_at%></td>
@@ -24,6 +24,7 @@
 					      </tr>
 
     			<%end%>
+
     			<%if r.area == 'Pedagogo(a)' && current_user.role == 'pedagogx'%>
 					  	<tr>
 					        <td><%= r.aluno.pessoa.pessoa_nome %></td>

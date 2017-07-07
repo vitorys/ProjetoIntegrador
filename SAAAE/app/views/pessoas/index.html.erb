@@ -5,7 +5,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nome</th>
       <th>Endereço</th>
       <th>Cidade</th>
@@ -20,7 +19,6 @@
   <tbody>
     <% @pessoas.each do |pessoa| %>
       <tr>
-        <td><%= link_to pessoa.id, pessoa_path(pessoa) %></td>
         <td><%= pessoa.pessoa_nome %></td>
         <td><%= pessoa.pessoa_endereco %></td>
         <td><%= pessoa.pessoa_cidade %></td>
@@ -37,7 +35,7 @@
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       pessoa_path(pessoa),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Você tem certeza??')) },
                       :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>

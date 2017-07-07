@@ -34,7 +34,7 @@
   <div class="form-group">
     <%= ff.label :relatorio_data,'Data : *', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= ff.text_field :relatorio_data, :class => 'form-control' %>
+      <%= ff.text_field :relatorio_data, :class => 'form-control', :data => {:mask=> '999-999-9999'} %>
     </div>
     <!--<%=ff.error_span(:relatorio_data) %>-->
   </div>
