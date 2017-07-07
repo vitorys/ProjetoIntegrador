@@ -2,6 +2,7 @@
     <div class="panel-heading">Atualizações</div>
     
     <div class="panel-body">
+    <%= column_chart User.group_by_month(:created_at, format: "%b %Y").count %>
 
     </div>
 </div>

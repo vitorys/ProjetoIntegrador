@@ -12,7 +12,6 @@ gem "less-rails", git: 'https://github.com/MustafaZain/less-rails'
 gem "twitter-bootstrap-rails"
 ## end
 
-
 gem 'pundit'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -66,3 +65,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "cpf_cnpj"
 gem "validators"
 gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
+
+gem 'groupdate', '~> 2.1.1'
+gem 'active_median', '~> 0.1.0'
+gem 'chartkick', '~> 1.2.4'

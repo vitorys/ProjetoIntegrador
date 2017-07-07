@@ -16,11 +16,10 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :motivo, :class => 'control-label col-lg-2' %>
+    <%= f.label :motivo, 'Motivo *', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :motivo, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:motivo) %>
   </div>
 
   <div class="form-group">
