@@ -1,10 +1,10 @@
-class RelatorioPsicologicosController < ApplicationController
+.page(params[:page]).per(15)class RelatorioPsicologicosController < ApplicationController
   before_action :set_relatorio_psicologico, only: [:show, :edit, :update, :destroy]
 
   # GET /relatorio_psicologicos
   # GET /relatorio_psicologicos.json
   def index
-    @relatorio_psicologicos = RelatorioPsicologico.all
+    @relatorio_psicologicos = RelatorioPsicologico.all.page(params[:page]).per(15)
     authorize @relatorio_psicologicos
   end
 

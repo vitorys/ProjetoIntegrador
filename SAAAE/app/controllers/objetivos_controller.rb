@@ -4,7 +4,7 @@ class ObjetivosController < ApplicationController
   # GET /objetivos
   # GET /objetivos.json
   def index
-    @objetivos = Objetivo.all
+    @objetivos = Objetivo.all.page(params[:page]).per(15)
   end
 
   # GET /objetivos/1

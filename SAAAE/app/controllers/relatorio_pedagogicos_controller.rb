@@ -4,7 +4,7 @@ class RelatorioPedagogicosController < ApplicationController
   # GET /relatorio_pedagogicos
   # GET /relatorio_pedagogicos.json
   def index
-    @relatorio_pedagogicos = RelatorioPedagogico.all
+    @relatorio_pedagogicos = RelatorioPedagogico.all.page(params[:page]).per(15)
     authorize @relatorio_pedagogicos
   end
 

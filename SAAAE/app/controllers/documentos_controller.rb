@@ -4,7 +4,7 @@ class DocumentosController < ApplicationController
   # GET /documentos
   # GET /documentos.json
   def index
-    @documentos = Documento.all
+    @documentos = Documento.all.page(params[:page]).per(15)
   end
 
   # GET /documentos/1

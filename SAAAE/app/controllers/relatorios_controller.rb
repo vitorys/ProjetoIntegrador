@@ -4,7 +4,7 @@ class RelatoriosController < ApplicationController
   # GET /relatorios
   # GET /relatorios.json
   def index
-    @relatorios = Relatorio.all
+    @relatorios = Relatorio.all.page(params[:page]).per(15)
   end
 
   # GET /relatorios/1
