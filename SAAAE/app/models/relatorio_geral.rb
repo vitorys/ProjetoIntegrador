@@ -4,6 +4,5 @@ class RelatorioGeral < ApplicationRecord
 
   validates_presence_of :rg_objetivo
   validates_presence_of :rg_atendimento
-  validates_presence_of :relatorio_id
 
 end

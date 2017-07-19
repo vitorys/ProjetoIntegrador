@@ -16,21 +16,21 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :funcionario_rf,'Registro do Funcionário *', :class => 'control-label col-lg-2' %>
+    <%= f.label :funcionario_rf, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :funcionario_rf, :class => 'form-control' %>
     </div>
     <!--<%=f.error_span(:funcionario_rf) %>-->
   </div>
   <div class="form-group">
-    <%= f.label :funcionario_area,'Área *', :class => 'control-label col-lg-2' %>
+    <%= f.label :funcionario_area, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
     <%= f.select(:funcionario_area, [['Psicólogo(a)', 'Psicólogo(a)'], ['Pedagogo(a)', 'Pedagogo(a)'], ['Assistente Social', 'Assistente Social']], {:prompt => 'Selecione a área'}) %>
     </div>
     <!--<%=f.error_span(:funcionario_area) %>-->
   </div>
   <div class="form-group">
-  <%= f.label :pessoa_id, 'Pessoa *', :class => 'control-label col-lg-2' %>
+  <%= f.label :pessoa_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
   <%= f.collection_select(:pessoa_id, Pessoa.all, :id, :pessoa_nome, {:prompt => 'Selecione a Pessoa'})%>  
   </div>

@@ -1,7 +1,11 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">Atualizações</div>
+    <div class="panel-heading">DashBoard</div>
     
     <div class="panel-body">
+    <h4>Relatórios Criados</h4>
+    <%= column_chart Relatorio.group_by_month(:created_at, format: "%b %Y").count %>
+
+    <h4>Usuários Cadastrados</h4>
     <%= column_chart User.group_by_month(:created_at, format: "%b %Y").count %>
 
     </div>

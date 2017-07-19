@@ -16,7 +16,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :ras_motivo,'Motivo *', :class => 'control-label col-lg-2' %>
+    <%= f.label :ras_motivo, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
 
       <%= f.collection_select(:ras_motivo, Objetivo.all, :motivo, :motivo, {:prompt => 'Selecione o Motivo'})%>
@@ -24,27 +24,27 @@
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :ras_entrevista,'Entrevista *', :class => 'control-label col-lg-2' %>
+    <%= f.label :ras_entrevista, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :ras_entrevista, :class => 'form-control' %>
+      <%= f.text_field :ras_entrevista, :class => 'form-control', :rows => 6  %>
     </div>
   </div>
 
   <%= f.fields_for :relatorio do |ff| %>
   <div class="form-group">
-    <%= ff.label :relatorio_data,'Data *', :class => 'control-label col-lg-2' %>
+    <%= ff.label :relatorio_data, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= ff.text_field :relatorio_data, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
-    <%= ff.label :aluno_id,'Aluno *', :class => 'control-label col-lg-2' %>
+    <%= ff.label :aluno_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
     <%= ff.select :aluno_id, options_for_select(Aluno.all.map{|a|[a.pessoa.pessoa_nome, a.id]}), {:prompt => 'Selecione o aluno'}%>    
     </div>
   </div>
   <div class="form-group">
-    <%= ff.label :funcionario_id,'Funcionário *', :class => 'control-label col-lg-2' %>
+    <%= ff.label :funcionario_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
 <%= ff.select :funcionario_id, options_for_select(Funcionario.all.map{|f|[f.pessoa.pessoa_nome, f.id]}), {:prompt => 'Selecione o Funcionário'}%>
       </div>

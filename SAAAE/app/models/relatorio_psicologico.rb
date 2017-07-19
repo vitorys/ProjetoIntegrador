@@ -4,6 +4,5 @@ class RelatorioPsicologico < ApplicationRecord
 
   validates_presence_of :rp_objetivo
   validates_presence_of :rp_atendimento
-  validates_presence_of :relatorio_id
   
 end
