@@ -1,2 +1,0 @@
-class Estatistica < ApplicationRecord
-end

@@ -5,6 +5,5 @@ class RelatorioPedagogico < ApplicationRecord
   validates_presence_of :rpe_objetivo
   validates_presence_of :rpe_atendimento
   validates_presence_of :rpe_motivo
-  validates_presence_of :relatorio_id
 
 end

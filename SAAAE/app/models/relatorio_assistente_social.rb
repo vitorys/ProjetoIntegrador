@@ -4,5 +4,4 @@ class RelatorioAssistenteSocial < ApplicationRecord
 
   validates_presence_of :ras_motivo
   validates_presence_of :ras_entrevista
-  validates_presence_of :relatorio_id
 end

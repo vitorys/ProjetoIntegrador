@@ -16,24 +16,22 @@
   <% end %>
 
  <div class="form-group">
-    <%= f.label :aluno_ra, 'Registro Acadêmico *', :class => 'control-label col-lg-2'%>
-    <%= f.label :pessoa_id,'Nome:', :class => 'control-label col-lg-2' %>
+  <%= f.label :pessoa_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.collection_select(:pessoa_id, Pessoa.all, :id, :pessoa_nome, {:prompt => 'Selecione a pessoa'})%>
       </div>
-    <%=f.error_span(:pessoa_id) %>
   </div>
 
   <div class="form-group">
-    <%= f.label :aluno_ra, 'Registro Acadêmico :', :class => 'control-label col-lg-2'%>
-    <div class="col-lg-10">
-      <%= f.text_field :aluno_ra, :class => 'form-control' %>
+    <%= f.label :aluno_ra, ' :class => 'control-label col-lg-2'%>
+      <div class="col-lg-10">
+      <%= f.number_field :aluno_ra, :class => 'form-control' %>
     </div>
   </div>
 
 
   <div class="form-group">
-    <%= f.label :aluno_curso, 'Curso *', :class => 'control-label col-lg-2' %>
+    <%= f.label :aluno_curso,  :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
     <%= f.select(:aluno_curso, [['Ciência da Computação', 'Ciência da Computação'],['Engenharia de Alimentos', 'Engenharia de Alimentos'], ['Engenharia Ambiental', 'Engenharia Ambiental'],['Engenharia Civil', 'Engenharia Civil'],['Engenharia Eletrônica', 'Engenharia Eletrônica'], ['Licenciatura em Química', 'Licenciatura em Química']], {:prompt => 'Selecione o curso'}) %>
 
@@ -41,27 +39,27 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :aluno_data_ingresso,'Data de Ingresso *', :class => 'control-label col-lg-2' %>
+    <%= f.label :aluno_data_ingresso, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :aluno_data_ingresso, :class => 'form-control', :input_html => { :maxlength => 14, :"data-mask" => "999-999-9999" } %>
+      <%= f.text_field :aluno_data_ingresso, :class => 'form-control', :input_html => { :maxlength => 14, :"data-mask" => "99-99-9999" } %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :aluno_periodo,'Período *', :class => 'control-label col-lg-2' %>
+    <%= f.label :aluno_periodo, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :aluno_periodo, :class => 'form-control' %>
+      <%= f.number_field :aluno_periodo, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :aluno_frequencia,'Frequência *', :class => 'control-label col-lg-2' %>
+    <%= f.label :aluno_frequencia, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :aluno_frequencia, :class => 'form-control' %>
+      <%= f.number_field :aluno_frequencia, :class => 'form-control',step: :any %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :aluno_coeficiente,'Coeficiente *', :class => 'control-label col-lg-2' %>
+    <%= f.label :aluno_coeficiente, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :aluno_coeficiente, :class => 'form-control' %>
+      <%= f.number_field :aluno_coeficiente, :class => 'form-control', step: :any %>
     </div>
   </div>
 
