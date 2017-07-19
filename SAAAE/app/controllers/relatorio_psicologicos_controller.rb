@@ -1,4 +1,4 @@
-.page(params[:page]).per(15)class RelatorioPsicologicosController < ApplicationController
+class RelatorioPsicologicosController < ApplicationController
   before_action :set_relatorio_psicologico, only: [:show, :edit, :update, :destroy]
 
   # GET /relatorio_psicologicos

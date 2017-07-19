@@ -1,4 +1,4 @@
-.page(params[:page]).per(15)class FuncionariosController < ApplicationController
+class FuncionariosController < ApplicationController
   before_action :set_funcionario, only: [:show, :edit, :update, :destroy]
 
   # GET /funcionarios

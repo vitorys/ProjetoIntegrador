@@ -1,4 +1,4 @@
-page(params[:.page]).per(15)class RelatorioGeralsController < ApplicationController
+class RelatorioGeralsController < ApplicationController
   before_action :set_relatorio_geral, only: [:show, :edit, :update, :destroy]
 
   # GET /relatorio_gerals
