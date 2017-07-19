@@ -4,7 +4,7 @@ class RelatorioAssistenteSocialsController < ApplicationController
   # GET /relatorio_assistente_socials
   # GET /relatorio_assistente_socials.json
   def index
-    @relatorio_assistente_socials = RelatorioAssistenteSocial.all
+    @relatorio_assistente_socials = RelatorioAssistenteSocial.all.page(params[:page]).per(15)
     authorize @relatorio_assistente_socials
   end
 

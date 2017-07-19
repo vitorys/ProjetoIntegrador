@@ -38,3 +38,4 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_documento_path,
             :class => 'btn btn-primary' %>
+<p><%= paginate @documentos %>

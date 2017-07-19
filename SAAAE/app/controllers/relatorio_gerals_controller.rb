@@ -1,10 +1,10 @@
-class RelatorioGeralsController < ApplicationController
+page(params[:.page]).per(15)class RelatorioGeralsController < ApplicationController
   before_action :set_relatorio_geral, only: [:show, :edit, :update, :destroy]
 
   # GET /relatorio_gerals
   # GET /relatorio_gerals.json
   def index
-    @relatorio_gerals = RelatorioGeral.all
+    @relatorio_gerals = RelatorioGeral.all.page(params[:page]).per(15)
     authorize @relatorio_gerals
   end
 

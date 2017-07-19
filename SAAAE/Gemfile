@@ -12,6 +12,10 @@ gem "less-rails", git: 'https://github.com/MustafaZain/less-rails'
 gem "twitter-bootstrap-rails"
 ## end
 
+
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps https://github.com/amatsuda/kaminari/…
+gem 'kaminari'
+
 gem 'pundit'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
