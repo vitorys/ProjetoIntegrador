@@ -1,3 +1,4 @@
+<% @pessoa = Pessoa.new %>
 <%= form_for @pessoa, :html => { :class => "form-horizontal pessoa" } do |f| %>
 
   <% if @pessoa.errors.any? %>
