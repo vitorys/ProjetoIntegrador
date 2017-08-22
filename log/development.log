@@ -1,0 +1,699 @@
+Started GET "/" for ::1 at 2017-08-21 01:02:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (26.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (672.2ms)
+Completed 200 OK in 1685ms (Views: 1502.5ms | ActiveRecord: 152.5ms)
+
+
+Started GET "/images/favicon.ico" for ::1 at 2017-08-21 01:02:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [108 times] (47.6ms)
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.8ms)
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.9ms)
+Started GET "/users/password/new" for ::1 at 2017-08-21 01:02:22 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/passwords/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-08-21 01:02:27 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QoMNrfF0gTYQV7wABHrz0ylMtt9jV+AfCEXfOGMbCw3Iy2jVzLpB8d2BxbXkOnbPyWnwKeLo+7SRKwc7b/pqQQ==", "user"=>{"email"=>"vitor.ysh@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (74.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vitor.ysh@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "7f26cb5ab9593cd71a0afce72ed6a3f27f48f3cbd0e78fb1c2e1efb925fefb4d"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "7f26cb5ab9593cd71a0afce72ed6a3f27f48f3cbd0e78fb1c2e1efb925fefb4d"], ["reset_password_sent_at", 2017-08-21 04:02:28 UTC], ["updated_at", 2017-08-21 04:02:28 UTC], ["id", 1]]
+  [1m[35m (50.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.7ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 171.2ms
+Sent mail to vitor.ysh@gmail.com (6.5ms)
+Date: Mon, 21 Aug 2017 01:02:28 -0300
+From: noreply@nuape.com
+Reply-To: noreply@nuape.com
+To: vitor.ysh@gmail.com
+Message-ID: <599a5b54c58f9_1c3b2aaab6b32ec43754@debian.mail>
+Subject: =?UTF-8?Q?Instru=C3=A7=C3=B5es_de_troca_de_senha?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello vitor.ysh@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=nfzNNCR8XRrjsYTGWFiZ">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1022ms (ActiveRecord: 139.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-21 01:02:28 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-08-21 01:08:45 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/passwords/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-08-21 01:08:51 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1b9KvZWpHRUHOsa6MOz+xMJXniQrMHoS6VULvBV2rNlf9y/FqGfd0srsvw/QrHvYInLY0qqPYblwO9O/GZfNlQ==", "user"=>{"email"=>"vitor.ysh@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vitor.ysh@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "624c976ac9bf491bd056bd9665ae5ecc801cc77a15eb2d67ca92ea6803a64e67"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "624c976ac9bf491bd056bd9665ae5ecc801cc77a15eb2d67ca92ea6803a64e67"], ["reset_password_sent_at", 2017-08-21 04:08:51 UTC], ["updated_at", 2017-08-21 04:08:51 UTC], ["id", 1]]
+  [1m[35m (49.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.6ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 7.2ms
+Sent mail to vitor.ysh@gmail.com (2.1ms)
+Date: Mon, 21 Aug 2017 01:08:51 -0300
+From: noreply@nuape.com
+Reply-To: noreply@nuape.com
+To: vitor.ysh@gmail.com
+Message-ID: <599a5cd32d493_1c3b2aaab6b32c6c3767e@debian.mail>
+Subject: =?UTF-8?Q?Instru=C3=A7=C3=B5es_de_troca_de_senha?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello vitor.ysh@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=ApbwSNLzquPDQJ7p525Q">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 75ms (ActiveRecord: 54.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-21 01:08:51 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 71ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 01:26:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (975.5ms)
+Completed 200 OK in 1564ms (Views: 1525.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2017-08-21 01:26:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [108 times] (32.8ms)
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.1ms)
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.3ms)
+Started GET "/users/password/new" for 127.0.0.1 at 2017-08-21 01:26:21 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/passwords/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2017-08-21 01:26:26 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M5jKjsznl0MxTYKkm9XbeAx+l9mTDe6w3HfzB4RfbITNRxX3EdngLRwzZglvHC2JG2hRlFW0SrqyZY9L2eL4HA==", "user"=>{"email"=>"vitor.ysh@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vitor.ysh@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "92c99b6bc1be2510da98e46af7a693bf6977d456678febd6a6f95e9ff0a2efac"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "92c99b6bc1be2510da98e46af7a693bf6977d456678febd6a6f95e9ff0a2efac"], ["reset_password_sent_at", 2017-08-21 04:26:26 UTC], ["updated_at", 2017-08-21 04:26:26 UTC], ["id", 1]]
+  [1m[35m (28.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.8ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 149.3ms
+Sent mail to vitor.ysh@gmail.com (226.4ms)
+Date: Mon, 21 Aug 2017 01:26:27 -0300
+From: noreply@nuape.com
+Reply-To: noreply@nuape.com
+To: vitor.ysh@gmail.com
+Message-ID: <599a60f3385c_27522b14e96363c4806b1@debian.mail>
+Subject: =?UTF-8?Q?Instru=C3=A7=C3=B5es_de_troca_de_senha?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello vitor.ysh@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=po6sQVBZR3zm6JHV_w9v">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1026ms (ActiveRecord: 31.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-21 01:26:27 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-08-21 01:27:21 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-21 01:27:28 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8W6YB40O9PRECEKYfIHxiwVILnRKLCd8mrN2FdkVNCCb/cwfRk26zyjjpuz0zpjvwAAKssenxGa3fppRxrjZjQ==", "user"=>{"email"=>"vitor.ysh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vitor.ysh@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 369ms (Views: 57.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-21 01:27:39 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JZOgxpq0APT7eJYHMpcE3g5nD8RzDuw3vjrHcTKit6AfPWU+n7hRhNTRXqhodUqIWGYjb/9FK1z/vPMMZsn4RQ==", "user"=>{"email"=>"vitor.ysh2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vitor.ysh2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (25.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "vitor.ysh2@gmail.com"], ["encrypted_password", "$2a$11$I6.QHas4WULLNq5GsZrvMu5o1L9J4uHc5hhaJApmPo4bg9kAvrwkm"], ["created_at", 2017-08-21 04:27:40 UTC], ["updated_at", 2017-08-21 04:27:40 UTC]]
+  [1m[35m (23.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-08-21 04:27:40 UTC], ["last_sign_in_at", 2017-08-21 04:27:40 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-08-21 04:27:40 UTC], ["id", 2]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 237ms (ActiveRecord: 58.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-08-21 01:27:40 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (103.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC' AS month FROM "relatorios" WHERE ("created_at" IS NOT NULL) GROUP BY (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC' AS month FROM "users" WHERE ("created_at" IS NOT NULL) GROUP BY (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC'[0m
+  Rendered renders/index/_admin_index.html.erb (134.3ms)
+  Rendered welcome/index.html.erb within layouts/application (136.6ms)
+  Rendered renders/_admin_screen.html.erb (1.0ms)
+Completed 200 OK in 224ms (Views: 106.5ms | ActiveRecord: 105.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-08-21 01:40:29 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC' AS month FROM "relatorios" WHERE ("created_at" IS NOT NULL) GROUP BY (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC' AS month FROM "users" WHERE ("created_at" IS NOT NULL) GROUP BY (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC'[0m
+  Rendered renders/index/_admin_index.html.erb (3.4ms)
+  Rendered welcome/index.html.erb within layouts/application (24.7ms)
+  Rendered renders/_admin_screen.html.erb (0.9ms)
+Completed 200 OK in 80ms (Views: 78.5ms | ActiveRecord: 1.2ms)
+
+
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:RegistrationsController> at /home/yudi/ProjetoIntegrador/app/controllers/user/registrations_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:RegistrationsController> at /home/yudi/ProjetoIntegrador/app/controllers/user/registrations_controller.rb:3)
+Started GET "/" for ::1 at 2017-08-21 02:20:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6437960877989244450);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDocumentos (20170418005723)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "documentos" ("id" serial primary key, "doc_rg" character varying, "doc_cpf" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6437960877989244450)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (216.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SAAAE_development"[0m
+Could not log "sql.active_record" event. SignalException: SIGHUP ["/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/core_ext/module/attribute_accessors.rb:61:in `logger'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/log_subscriber.rb:91:in `logger'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/log_subscriber.rb:83:in `finish'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/notifications/fanout.rb:102:in `finish'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/notifications/fanout.rb:46:in `block in finish'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/notifications/fanout.rb:46:in `each'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/notifications/fanout.rb:46:in `finish'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/notifications/instrumenter.rb:42:in `finish_with_state'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/notifications/instrumenter.rb:27:in `ensure in instrument'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activesupport-5.0.2/lib/active_support/notifications/instrumenter.rb:27:in `instrument'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:70:in `drop_database'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/tasks/postgresql_database_tasks.rb:28:in `drop'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/tasks/database_tasks.rb:136:in `drop'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/tasks/database_tasks.rb:152:in `block in drop_current'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/tasks/database_tasks.rb:292:in `block in each_current_configuration'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/tasks/database_tasks.rb:291:in `each'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/tasks/database_tasks.rb:291:in `each_current_configuration'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/tasks/database_tasks.rb:151:in `drop_current'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/railties/databases.rake:42:in `block (2 levels) in <top (required)>'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:250:in `block in execute'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:250:in `each'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:250:in `execute'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:194:in `block in invoke_with_call_chain'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:187:in `invoke_with_call_chain'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:180:in `invoke'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/activerecord-5.0.2/lib/active_record/railties/databases.rake:38:in `block (2 levels) in <top (required)>'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:250:in `block in execute'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:250:in `each'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:250:in `execute'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:194:in `block in invoke_with_call_chain'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:187:in `invoke_with_call_chain'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/task.rb:180:in `invoke'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:152:in `invoke_task'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:108:in `block (2 levels) in top_level'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:108:in `each'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:108:in `block in top_level'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:117:in `run_with_threads'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:102:in `top_level'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:80:in `block in run'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:178:in `standard_exception_handling'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/lib/rake/application.rb:77:in `run'", "/home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'", "/home/yudi/.rbenv/versions/2.4.0/bin/rake:22:in `load'", "/home/yudi/.rbenv/versions/2.4.0/bin/rake:22:in `<main>'"]
+  [1m[36mActiveRecord::SchemaMigration Load (22.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (24.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (393.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SAAAE_development"[0m
+  [1m[35m (214.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SAAAE_test"[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (83.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6437960877989244450);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDocumentos (20170418005723)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (96.0ms)[0m  [1m[35mCREATE TABLE "documentos" ("id" serial primary key, "doc_rg" character varying, "doc_cpf" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170418005723"]]
+  [1m[35m (10.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20170418005724)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170418005724"]]
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePessoas (20170418005725)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.0ms)[0m  [1m[35mCREATE TABLE "pessoas" ("id" serial primary key, "pessoa_nome" character varying, "pessoa_sexo" character varying, "pessoa_endereco" character varying, "pessoa_cidade" character varying, "pessoa_estado" character varying, "pessoa_cep" character varying, "documento_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_81c5838244"
+FOREIGN KEY ("documento_id")
+  REFERENCES "documentos" ("id")
+, CONSTRAINT "fk_rails_ba2f3a2cc8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE  INDEX  "index_pessoas_on_documento_id" ON "pessoas"  ("documento_id")[0m
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE  INDEX  "index_pessoas_on_user_id" ON "pessoas"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170418005725"]]
+  [1m[35m (20.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAlunos (20170418005727)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.9ms)[0m  [1m[35mCREATE TABLE "alunos" ("id" serial primary key, "aluno_ra" integer, "aluno_curso" character varying, "aluno_data_ingresso" date, "aluno_periodo" integer, "aluno_frequencia" float, "aluno_coeficiente" float, "pessoa_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0a71a85fae"
+FOREIGN KEY ("pessoa_id")
+  REFERENCES "pessoas" ("id")
+)[0m
+  [1m[35m (42.9ms)[0m  [1m[35mCREATE  INDEX  "index_alunos_on_pessoa_id" ON "alunos"  ("pessoa_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170418005727"]]
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFuncionarios (20170426011623)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.8ms)[0m  [1m[35mCREATE TABLE "funcionarios" ("id" serial primary key, "funcionario_rf" integer, "funcionario_area" character varying, "funcionario_permissao" integer, "pessoa_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_61535b44e1"
+FOREIGN KEY ("pessoa_id")
+  REFERENCES "pessoas" ("id")
+)[0m
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE  INDEX  "index_funcionarios_on_pessoa_id" ON "funcionarios"  ("pessoa_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170426011623"]]
+  [1m[35m (18.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRelatorios (20170426011626)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.4ms)[0m  [1m[35mCREATE TABLE "relatorios" ("id" serial primary key, "relatorio_data" date, "aluno_id" integer, "funcionario_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_75805863c1"
+FOREIGN KEY ("aluno_id")
+  REFERENCES "alunos" ("id")
+, CONSTRAINT "fk_rails_9176c63898"
+FOREIGN KEY ("funcionario_id")
+  REFERENCES "funcionarios" ("id")
+)[0m
+  [1m[35m (42.4ms)[0m  [1m[35mCREATE  INDEX  "index_relatorios_on_aluno_id" ON "relatorios"  ("aluno_id")[0m
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE  INDEX  "index_relatorios_on_funcionario_id" ON "relatorios"  ("funcionario_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170426011626"]]
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRelatorioAssistenteSocials (20170426011630)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (60.6ms)[0m  [1m[35mCREATE TABLE "relatorio_assistente_socials" ("id" serial primary key, "ras_motivo" text, "ras_entrevista" text, "relatorio_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_4002458e9a"
+FOREIGN KEY ("relatorio_id")
+  REFERENCES "relatorios" ("id")
+)[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE  INDEX  "index_relatorio_assistente_socials_on_relatorio_id" ON "relatorio_assistente_socials"  ("relatorio_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170426011630"]]
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRelatorioPsicologicos (20170426011634)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (83.6ms)[0m  [1m[35mCREATE TABLE "relatorio_psicologicos" ("id" serial primary key, "rp_objetivo" text, "rp_atendimento" text, "relatorio_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_224f376e45"
+FOREIGN KEY ("relatorio_id")
+  REFERENCES "relatorios" ("id")
+)[0m
+  [1m[35m (42.9ms)[0m  [1m[35mCREATE  INDEX  "index_relatorio_psicologicos_on_relatorio_id" ON "relatorio_psicologicos"  ("relatorio_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170426011634"]]
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRelatorioGerals (20170426011639)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (84.5ms)[0m  [1m[35mCREATE TABLE "relatorio_gerals" ("id" serial primary key, "rg_objetivo" text, "rg_atendimento" text, "relatorio_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_99a0a7035f"
+FOREIGN KEY ("relatorio_id")
+  REFERENCES "relatorios" ("id")
+)[0m
+  [1m[35m (43.0ms)[0m  [1m[35mCREATE  INDEX  "index_relatorio_gerals_on_relatorio_id" ON "relatorio_gerals"  ("relatorio_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170426011639"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRelatorioPedagogicos (20170504233706)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.8ms)[0m  [1m[35mCREATE TABLE "relatorio_pedagogicos" ("id" serial primary key, "rpe_objetivo" text, "rpe_atendimento" text, "relatorio_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_9f14fbe4c5"
+FOREIGN KEY ("relatorio_id")
+  REFERENCES "relatorios" ("id")
+)[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE  INDEX  "index_relatorio_pedagogicos_on_relatorio_id" ON "relatorio_pedagogicos"  ("relatorio_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170504233706"]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRoleToUsuarios (20170526004706)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (176.5ms)[0m  [1m[35mALTER TABLE "users" ADD "role" integer DEFAULT 99[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170526004706"]]
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to FixColumnName (20170526005621)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170526005621"]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAtendimentos (20170602010012)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.4ms)[0m  [1m[35mCREATE TABLE "atendimentos" ("id" serial primary key, "aluno_id" integer, "area" character varying, "funcionario_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_078ced7520"
+FOREIGN KEY ("aluno_id")
+  REFERENCES "alunos" ("id")
+, CONSTRAINT "fk_rails_ac8f727144"
+FOREIGN KEY ("funcionario_id")
+  REFERENCES "funcionarios" ("id")
+)[0m
+  [1m[35m (42.4ms)[0m  [1m[35mCREATE  INDEX  "index_atendimentos_on_aluno_id" ON "atendimentos"  ("aluno_id")[0m
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE  INDEX  "index_atendimentos_on_funcionario_id" ON "atendimentos"  ("funcionario_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170602010012"]]
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoverPermissao (20170613001535)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "funcionarios" DROP "funcionario_permissao"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170613001535"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateObjetivos (20170613002638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.4ms)[0m  [1m[35mCREATE TABLE "objetivos" ("id" serial primary key, "motivo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170613002638"]]
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to Atendimento (20170706213335)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "atendimentos" ADD "telefone" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170706213335"]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to Atendimentos (20170706215845)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170706215845"]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-08-22 21:16:52 UTC], ["updated_at", 2017-08-22 21:16:52 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6437960877989244450)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-08-22 18:29:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (611.9ms)
+Completed 200 OK in 1467ms (Views: 1428.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/images/favicon.ico" for ::1 at 2017-08-22 18:29:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [108 times] (62.9ms)
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.1ms)
+  Rendering /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/yudi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (113.0ms)
+Started GET "/users/password/new" for ::1 at 2017-08-22 18:29:29 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/passwords/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 85ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-22 18:29:49 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-22 18:30:07 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYdNX3g4D7aX84SWA8/d1qMGFhFQmWVmNA9YeMKdntDokVnbuLlV3UVJUKTCUVnpRUijlG1LRgHuFrTCjYmisw==", "user"=>{"email"=>"vitor.ysh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vitor.ysh@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "vitor.ysh@gmail.com"], ["encrypted_password", "$2a$11$yEVOreis1by2q/JGPNBZ0e4kPtJuqDOYTfgNpd.e.fI2KekoYpe9m"], ["created_at", 2017-08-22 21:30:07 UTC], ["updated_at", 2017-08-22 21:30:07 UTC]]
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-08-22 21:30:07 UTC], ["last_sign_in_at", 2017-08-22 21:30:07 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", 2017-08-22 21:30:07 UTC], ["id", 1]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 310ms (ActiveRecord: 30.9ms)
+
+
+Started GET "/welcome/index" for ::1 at 2017-08-22 18:30:07 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC' AS month FROM "relatorios" WHERE ("created_at" IS NOT NULL) GROUP BY (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC' AS month FROM "users" WHERE ("created_at" IS NOT NULL) GROUP BY (DATE_TRUNC('month', ("created_at"::timestamptz - INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 hour') AT TIME ZONE 'Etc/UTC'[0m
+  Rendered renders/index/_admin_index.html.erb (32.0ms)
+  Rendered welcome/index.html.erb within layouts/application (35.2ms)
+  Rendered renders/_admin_screen.html.erb (0.8ms)
+Completed 200 OK in 114ms (Views: 97.5ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-22 18:30:16 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"reedQjQeOBQDLRy52E2mdeWvmGQ8JEtEr07kQDKNtd8Bis2MAAWNlfP54K+S6X7k3tUCmuTx+vZPvSs2YIGnog=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started DELETE "/users/sign_out" for ::1 at 2017-08-22 18:30:17 -0300
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  Parameters: {"authenticity_token"=>"reedQjQeOBQDLRy52E2mdeWvmGQ8JEtEr07kQDKNtd8Bis2MAAWNlfP54K+S6X7k3tUCmuTx+vZPvSs2YIGnog=="}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 35ms (ActiveRecord: 3.7ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-22 18:30:17 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-08-22 18:30:19 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.6ms)
+  Rendered users/passwords/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-08-22 18:30:26 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7qWasiHmbLO66heHNqNIwC3QKFKvUdWKtnLQj5/Vhx+49c2YksF+Go/T0zsY7f057GRZeU2tBlp7zrk3Wbdag==", "user"=>{"email"=>"vitor.ysh@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vitor.ysh@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "af2062a183f84f8983ac9462216ab5dc7cfddd5a87e654ed9e3a8305c4bbd3b7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "af2062a183f84f8983ac9462216ab5dc7cfddd5a87e654ed9e3a8305c4bbd3b7"], ["reset_password_sent_at", 2017-08-22 21:30:26 UTC], ["updated_at", 2017-08-22 21:30:26 UTC], ["id", 1]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.7ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 250.7ms
+Sent mail to vitor.ysh@gmail.com (170.4ms)
+Date: Tue, 22 Aug 2017 18:30:27 -0300
+From: noreply@nuape.com
+Reply-To: noreply@nuape.com
+To: vitor.ysh@gmail.com
+Message-ID: <599ca2737a037_8392b1d6b5b94e833870@debian.mail>
+Subject: =?UTF-8?Q?Instru=C3=A7=C3=B5es_de_troca_de_senha?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello vitor.ysh@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=9EHzdYwMy-zjqQx2CuU8">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 990ms (ActiveRecord: 18.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-22 18:30:27 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+

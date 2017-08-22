@@ -12,6 +12,7 @@ gem "less-rails", git: 'https://github.com/MustafaZain/less-rails'
 gem "twitter-bootstrap-rails"
 ## end
 
+gem 'rails-erd', require: false, group: :development
 
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps https://github.com/amatsuda/kaminari/…
 gem 'kaminari'
