@@ -22,17 +22,11 @@ Now we are ready to install rbenv. The easiest way to do that is to run these co
 
 ```
     $ cd
-
     $ git clone git://github.com/sstephenson/rbenv.git .rbenv
-
     $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-
     $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-
     $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-
     $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
-
     $ source ~/.bash_profile
 ```
 
@@ -72,12 +66,11 @@ Then update apt-get and install the Node.js package:
 
 ```
 $ sudo apt-get update
-
-$sudo apt-get install nodejs
+$ sudo apt-get install nodejs
 ```
 
 
-### Installing
+### Installing and Deployment
 
 A step by step series of examples that tell you have to get a development env running
 
@@ -96,25 +89,20 @@ until finished
 End with an example of getting some data out of the system or using it for a little demo
 
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Lucas Guedes Barboza** - [LucasGB](https://github.com/LucasGB)
-* **Renan Kodama Rodrigues** - [RenanKodama](https://github.com/RenanKodama)
-* **Vitor Yudi Shinohara** - [vitorys](https://github.com/vitorys)
+* **Lucas Guedes Barboza** - UTFPR - [LucasGB](https://github.com/LucasGB)
+* **Renan Kodama Rodrigues** - UTFPR -[RenanKodama](https://github.com/RenanKodama)
+* **Vitor Yudi Shinohara** - UTFPR - [vitorys](https://github.com/vitorys)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/vitorys/ProjetoIntegrador/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
