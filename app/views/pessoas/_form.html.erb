@@ -58,7 +58,7 @@
     </div>
   </div>
     
-  <%= f.fields_for :documento do |ff| %>
+  <%= f.fields_for :documento, Documento.new do |ff| %>
   <div class="form-group">
     <%= ff.label :doc_rg, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -75,7 +75,7 @@
   
   <%end%>
 
-  <%= f.fields_for :user do |fff| %>
+  <%= f.fields_for :user, User.new do |fff| %>
     <div class="form-group">
       <%= fff.label :email, :class => 'control-label col-lg-2' %>   
       <div class="col-lg-10">
