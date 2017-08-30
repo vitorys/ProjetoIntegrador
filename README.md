@@ -65,39 +65,53 @@ Then update apt-get and install the Node.js package:
 
 
 ```
-$ sudo apt-get update
 $ sudo apt-get install nodejs
 ```
 
-
-### Installing and Deployment
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+The last step is install PostgreSQL. To do it, run the command below.
 
 ```
-Give the example
+$ sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
 
-And repeat
+You need to create a user for PostgreSQL. Replace `yudi` by your user.
 
 ```
-until finished
+$ sudo -u postgres createuser -rds yudi
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Installing
 
+The installation process is easy.
+Clone the repository, then enter in the folder and run the commands:
+
+```
+$ bundle install
+```
+
+And do the database creations.
+
+```
+$ rake db:create && rake db:migrate && rake db:seed
+```
+
+## Deployment
+
+To deploy the project, just run the command on the project folder. 
+
+```
+$ rails s
+```
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/vitorys/ProjetoIntegrador/tags). 
 
 ## Authors
 
-* **Lucas Guedes Barboza** - UTFPR - [LucasGB](https://github.com/LucasGB)
-* **Renan Kodama Rodrigues** - UTFPR -[RenanKodama](https://github.com/RenanKodama)
-* **Vitor Yudi Shinohara** - UTFPR - [vitorys](https://github.com/vitorys)
+* **Lucas Guedes Barboza** - [LucasGB](https://github.com/LucasGB) - UTFPR ;
+* **Renan Kodama Rodrigues** - [RenanKodama](https://github.com/RenanKodama) - UTFPR ;
+* **Vitor Yudi Shinohara** - [vitorys](https://github.com/vitorys) - UTFPR ;
 
 See also the list of [contributors](https://github.com/vitorys/ProjetoIntegrador/contributors) who participated in this project.
 
