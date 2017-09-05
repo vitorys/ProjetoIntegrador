@@ -4,7 +4,17 @@ class RelatorioPedagogicosController < ApplicationController
   # GET /relatorio_pedagogicos
   # GET /relatorio_pedagogicos.json
   def index
-    @relatorio_pedagogicos = RelatorioPedagogico.all.page(params[:page]).per(15)
+    @relatorio_pedagogicos =
+
+    @idUser = current_user.pessoa.funcionario
+
+    @r = Relatorio.all
+    @r = @r.where(funcionario_id: @idUser)
+    
+    @id = current_user.pessoa.funcionario
+
+    @relatorio_pedagogicos = RelatorioPedagogico.where(id: @r.ids) 
+
     authorize @relatorio_pedagogicos
   end
 

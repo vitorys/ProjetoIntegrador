@@ -4,7 +4,17 @@ class RelatorioPsicologicosController < ApplicationController
   # GET /relatorio_psicologicos
   # GET /relatorio_psicologicos.json
   def index
-    @relatorio_psicologicos = RelatorioPsicologico.all.page(params[:page]).per(15)
+    @idUser = current_user.pessoa.funcionario
+
+    @r = Relatorio.all
+    @r = @r.where(funcionario_id: @idUser)
+    
+    @id = current_user.pessoa.funcionario
+
+    @relatorio_psicologicos = RelatorioPsicologico.where(id: @r.ids)
+    @relatorio_psicologicos.page(params[:page]).per(15)
+
+
     authorize @relatorio_psicologicos
   end
 
